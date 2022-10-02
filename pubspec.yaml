@@ -40,7 +40,30 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/images/
+    - assets/images/add.png
+    - assets/images/addfile.png
+    - assets/images/calendar.png
+    - assets/images/checkIcon.png
+    - assets/images/cleardarkIcon.png
+    - assets/images/clearxIcon.png
+    - assets/images/errorIcon.png
+    - assets/images/facebook.png
+    - assets/images/files.png
+    - assets/images/Google.png
+    - assets/images/home.png
+    - assets/images/items.png
+    - assets/images/logo.png
+    - assets/images/notifications.png
+    - assets/images/obtulus.png
+    - assets/images/onBoarding1.png
+    - assets/images/onBoarding2.png
+    - assets/images/onBoarding3.png
+    - assets/images/onBoarding4.png
+    - assets/images/pomodoro.png
+    - assets/images/search.png
+    - assets/images/settings.png
+    - assets/images/sun.png
+    - assets/images/tasks.png
 
   fonts:
     - family: Montserrat

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nixo/features/onboarding/presentation/pages/onboarding_screen.dart';
 import 'package:nixo/features/splash/presentation/pages/splash.dart';
 
 import '../../core/utils/app_strings.dart';
@@ -18,6 +19,8 @@ class RouteGenerator {
     switch (routeSettings.name) {
       case AppRoutes.initialRoute:
         return MaterialPageRoute(builder: ((context) => const SplashScreen()));
+      case AppRoutes.onBoardingRoute:
+        return MaterialPageRoute(builder: ((context) => const OnBoardingScreen()));
       default:
         return unDefinedRoute();
     }
