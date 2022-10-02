@@ -1,0 +1,9 @@
+<?xml version ="1.0" encoding="utf-8"?>
+<resources>
+<string name="app_name">nixo</string>
+<string name="facebook_app_id">476812627704487</string>
+<string name="fb_login_protocol_scheme">fb476812627704487</string>
+<string name="facebook_client_token">7bc6e03b572a861cbe9d1ffb218d0780</string>
+
+</resources>
+

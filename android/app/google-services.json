@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "802903971281",
+    "project_id": "nixo-1c978",
+    "storage_bucket": "nixo-1c978.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:802903971281:android:ff0564d857a1eba3fdbcf0",
+        "android_client_info": {
+          "package_name": "com.obtulus.nixo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "802903971281-ohmri2kntj0v5uq5lg8g5bd51uooh8jh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkUbSyUgkoYA8nQvo8WEoaNQCFWfueiqY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "802903971281-ohmri2kntj0v5uq5lg8g5bd51uooh8jh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
