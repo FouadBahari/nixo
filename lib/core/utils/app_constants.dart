@@ -1,5 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:nixo/core/utils/app_colors.dart';
 import 'package:nixo/core/utils/app_fonts.dart';
 
@@ -8,7 +8,9 @@ class AppConstants {
   static const int sliderAnimationTime = 300;
 
   static void showErrorDialog(
-      {required BuildContext context, required String msg,required VoidCallback onPressed}) {
+      {required BuildContext context,
+      required String msg,
+      required VoidCallback onPressed}) {
     showDialog(
         context: context,
         builder: (context) {
@@ -31,10 +33,18 @@ class AppConstants {
                   ),
                 ),
                 child: const Text('ok'),
-
               )
             ],
           );
         });
+  }
+
+  static void showToast(
+      {required String msg, Color? color, ToastGravity? gravity}) {
+    Fluttertoast.showToast(
+        toastLength: Toast.LENGTH_LONG,
+        msg: msg,
+        backgroundColor: color ?? AppColors.primary,
+        gravity: gravity ?? ToastGravity.BOTTOM);
   }
 }
