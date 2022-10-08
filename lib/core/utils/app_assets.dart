@@ -16,6 +16,7 @@ class AssetsManager {
   static const logo = '$imagePath/logo.png';
   static const notifications = '$imagePath/notifications.png';
   static const obtulus = '$imagePath/obtulus.png';
+  static const onboardbcgr = '$imagePath/onboardbcgr.png';
   static const onBoarding1 = '$imagePath/onBoarding1.png';
   static const onBoarding2 = '$imagePath/onBoarding2.png';
   static const onBoarding3 = '$imagePath/onBoarding3.png';
