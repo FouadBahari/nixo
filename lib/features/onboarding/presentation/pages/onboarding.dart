@@ -55,7 +55,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             : const SizedBox(),
         _currentPage == 3
             ? Positioned(
-                bottom: AppSize.height40,
+                bottom: AppSize.height50,
                 left: AppSize.width20,
                 right: AppSize.width20,
                 child: TextButton(
@@ -98,19 +98,24 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             showBackButton: false,
             showSkipButton: true,
             showNextButton: false,
-            showDoneButton: false,
+            showDoneButton: true,
             onChange: ((value) {
               setState(() {
                 _currentPage = value;
               });
             }),
+            onDone: () {},
             skip: Text(
               AppStrings.skip,
               style: getBoldStyle(color: AppColors.primary),
             ),
+            done: Text(
+              AppStrings.done,
+              style: getBoldStyle(color: AppColors.transparent),
+            ),
             dotsDecorator: _buildDotsDecorator()),
       ],
-    ); 
+    );
   }
 
   DotsDecorator _buildDotsDecorator() {
@@ -118,8 +123,8 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
       spacing: EdgeInsets.symmetric(horizontal: AppSize.height2),
       activeColor: AppColors.primary,
       color: Colors.grey,
-      activeSize:  Size(AppSize.height18, AppSize.height8),
-      activeShape:  RoundedRectangleBorder(
+      activeSize: Size(AppSize.height18, AppSize.height8),
+      activeShape: RoundedRectangleBorder(
         borderRadius: BorderRadius.all(Radius.circular(AppSize.radius25)),
       ),
     );
