@@ -5,7 +5,7 @@ import 'package:nixo/config/routes/app_routes.dart';
 import 'package:nixo/core/utils/app_assets.dart';
 import 'package:nixo/core/utils/app_colors.dart';
 import 'package:nixo/core/utils/app_dimensions.dart';
-import 'package:nixo/core/utils/app_fonts.dart';
+import 'package:nixo/core/utils/app_strings.dart';
 import 'package:nixo/core/utils/app_styles.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -47,9 +47,9 @@ class _SplashScreenState extends State<SplashScreen> {
         ),
         SizedBox(height: AppSize.height25),
         Text(
-          'Nixo',
+          AppStrings.appName,
           style: getSemiBoldStyle(
-              color: AppColors.white, fontSize: FontSize.s22 * 2),
+              color: AppColors.white, fontSize: AppFontSize.font22 * 2),
         ),
         const Expanded(child: Text('')),
         Center(

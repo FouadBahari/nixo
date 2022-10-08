@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nixo/features/onboarding/presentation/pages/onboarding_screen.dart';
+import 'package:nixo/features/onboarding/presentation/pages/onboarding.dart';
 import 'package:nixo/features/splash/presentation/pages/splash.dart';
 
 import '../../core/utils/app_strings.dart';

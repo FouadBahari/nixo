@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:nixo/core/utils/app_colors.dart';
-import 'package:nixo/core/utils/app_fonts.dart';
+import 'package:nixo/core/utils/app_dimensions.dart';
+
+import 'app_fonts.dart';
 
 class AppConstants {
   static const int splashDelay = 3;
@@ -19,7 +21,7 @@ class AppConstants {
               msg,
               style: TextStyle(
                 color: AppColors.black,
-                fontSize: FontSize.s16,
+                fontSize: AppFontSize.font16,
               ),
             ),
             actions: [
@@ -28,7 +30,7 @@ class AppConstants {
                 style: TextButton.styleFrom(
                   textStyle: TextStyle(
                     color: AppColors.black,
-                    fontSize: FontSize.s14,
+                    fontSize: AppFontSize.font16,
                     fontWeight: FontWeightManager.bold,
                   ),
                 ),
