@@ -17,6 +17,7 @@ class AppSize {
   static double height15 = 15 * factorHeight;
   static double height18 = 18 * factorHeight;
   static double height20 = 20 * factorHeight;
+  static double height22 = 22 * factorHeight;
   static double height25 = 25 * factorHeight;
   static double height30 = 30 * factorHeight;
   static double height35 = 35 * factorHeight;
@@ -25,8 +26,10 @@ class AppSize {
   static double height50 = 50 * factorHeight;
   static double height55 = 55 * factorHeight;
   static double height60 = 60 * factorHeight;
+  static double height61 = 61 * factorHeight;
   static double height80 = 80 * factorHeight;
   static double height100 = 100 * factorHeight;
+  static double height120 = 120 * factorHeight;
   static double height140 = 140 * factorHeight;
   static double height150 = 150 * factorHeight;
   static double height200 = 200 * factorHeight;
@@ -36,20 +39,26 @@ class AppSize {
 
   //
 
+  static double width1 = 1 * factorwidth;
+  static double width2 = 2 * factorwidth;
   static double width5 = 5 * factorwidth;
   static double width10 = 10 * factorwidth;
   static double width15 = 15 * factorwidth;
   static double width20 = 20 * factorwidth;
+  static double width24 = 24 * factorwidth;
   static double width25 = 25 * factorwidth;
   static double width30 = 30 * factorwidth;
   static double width35 = 35 * factorwidth;
   static double width40 = 40 * factorwidth;
   static double width45 = 45 * factorwidth;
   static double width50 = 50 * factorwidth;
-  static double width100 = 55 * factorwidth;
+  static double width100 = 100 * factorwidth;
+  static double width120 = 120 * factorwidth;
+  static double width150 = 150 * factorwidth;
 
   //
   static double radius10 = 10 * factorHeight;
+  static double radius14 = 14 * factorHeight;
   static double radius15 = 15 * factorHeight;
   static double radius20 = 20 * factorHeight;
   static double radius25 = 25 * factorHeight;
@@ -69,7 +78,9 @@ class AppFontSize {
   static double font15 = 15 * factorHeight;
   static double font16 = 16 * factorHeight;
   static double font17 = 17 * factorHeight;
+  static double font19 = 19 * factorHeight;
   static double font20 = 20 * factorHeight;
+  static double font21 = 21 * factorHeight;
   static double font22 = 22 * factorHeight;
   static double font25 = 25 * factorHeight;
   static double font30 = 30 * factorHeight;
@@ -85,6 +96,9 @@ class AppMargin {
   static double m16 = 16.0 * factorHeight;
   static double m18 = 18.0 * factorHeight;
   static double m20 = 20.0 * factorHeight;
+  static double m24 = 24.0 * factorHeight;
+  static double m40 = 40.0 * factorHeight;
+  static double m50 = 50.0 * factorHeight;
 }
 
 class AppPadding {

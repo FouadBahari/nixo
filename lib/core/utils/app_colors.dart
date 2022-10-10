@@ -10,6 +10,7 @@ class AppColors {
 
   static Color black = HexColor.fromHex("#000000");
   static Color white = HexColor.fromHex("#FFFFFF");
+  static Color fbcolor = HexColor.fromHex("#1877F2");
   static Color hint = Colors.grey;
   static Color transparent = Colors.transparent;
 

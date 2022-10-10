@@ -66,6 +66,7 @@ flutter:
     - assets/images/settings.png
     - assets/images/sun.png
     - assets/images/tasks.png
+    - assets/images/authbackground.png
 
   fonts:
     - family: Montserrat

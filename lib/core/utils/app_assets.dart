@@ -26,4 +26,5 @@ class AssetsManager {
   static const settings = '$imagePath/settings.png';
   static const sun = '$imagePath/sun.png';
   static const tasks = '$imagePath/tasks.png';
+  static const authbackground = '$imagePath/authbackground.png';
 }
