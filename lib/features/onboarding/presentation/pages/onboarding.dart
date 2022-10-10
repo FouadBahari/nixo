@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
+import 'package:nixo/config/routes/app_routes.dart';
 import 'package:nixo/core/utils/app_assets.dart';
 import 'package:nixo/core/utils/app_colors.dart';
 import 'package:nixo/core/utils/app_dimensions.dart';
@@ -49,7 +50,10 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 left: AppSize.width20,
                 right: AppSize.width20,
                 child: PrimaryButtom(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushReplacementNamed(
+                        context, AppRoutes.mainRoute);
+                  },
                   title: AppStrings.newHere,
                 ))
             : const SizedBox(),
