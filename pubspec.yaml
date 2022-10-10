@@ -28,6 +28,7 @@ dependencies:
   internet_connection_checker: ^0.0.1+4
   introduction_screen: ^3.0.2
   shared_preferences: ^2.0.15
+  persistent_bottom_nav_bar: ^5.0.2
 
 dev_dependencies:
   change_app_package_name: ^1.1.0

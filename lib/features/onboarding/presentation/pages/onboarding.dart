@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
+import 'package:nixo/config/routes/app_routes.dart';
 import 'package:nixo/core/utils/app_assets.dart';
 import 'package:nixo/core/utils/app_colors.dart';
 import 'package:nixo/core/utils/app_dimensions.dart';
@@ -44,6 +45,34 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             left: 0,
             right: 0,
             child: Image.asset(AssetsManager.onboardbcgr)),
+
+        _currentPage == 3
+            ? Positioned(
+                bottom: AppSize.height100,
+                left: AppSize.width20,
+                right: AppSize.width20,
+                child: PrimaryButtom(
+                  onPressed: () {
+                    Navigator.pushReplacementNamed(
+                        context, AppRoutes.mainRoute);
+                  },
+                  title: AppStrings.newHere,
+                ))
+            : const SizedBox(),
+        _currentPage == 3
+            ? Positioned(
+                bottom: AppSize.height50,
+                left: AppSize.width20,
+                right: AppSize.width20,
+                child: TextButton(
+                  onPressed: () {},
+                  child: Text(AppStrings.alreadyHaveAccount,
+                      style: getSemiBoldStyle(
+                        color: AppColors.primary,
+                      )),
+                ))
+            : const SizedBox(),
+
         IntroductionScreen(
             globalBackgroundColor: Colors.transparent,
             isBottomSafeArea: true,
