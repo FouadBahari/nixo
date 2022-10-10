@@ -7,6 +7,7 @@ import 'package:nixo/core/utils/app_dimensions.dart';
 import 'package:nixo/core/utils/app_strings.dart';
 import 'package:nixo/core/utils/app_styles.dart';
 import 'package:nixo/core/widgets/primary_btn.dart';
+import 'package:nixo/config/routes/app_routes.dart';
 
 class OnBoardingScreen extends StatefulWidget {
   const OnBoardingScreen({super.key});
@@ -44,6 +45,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             left: 0,
             right: 0,
             child: Image.asset(AssetsManager.onboardbcgr)),
+
         _currentPage == 3
             ? Positioned(
                 bottom: AppSize.height100,
@@ -70,6 +72,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                       )),
                 ))
             : const SizedBox(),
+
         IntroductionScreen(
             globalBackgroundColor: Colors.transparent,
             isBottomSafeArea: true,
@@ -118,6 +121,36 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               style: getBoldStyle(color: AppColors.transparent),
             ),
             dotsDecorator: _buildDotsDecorator()),
+        _currentPage == 3
+            ? Positioned(
+                bottom: AppSize.height120,
+                left: AppSize.width20,
+                right: AppSize.width20,
+                child: SizedBox(
+                  height: AppSize.height50,
+                  width: double.infinity,
+                  child: PrimaryButtom(
+                    onPressed: () {
+                      Navigator.pushReplacementNamed(
+                          context, AppRoutes.registerRoute);
+                    },
+                    title: AppStrings.newHere,
+                  ),
+                ))
+            : const SizedBox(),
+        _currentPage == 3
+            ? Positioned(
+                bottom: AppSize.height50,
+                left: AppSize.width20,
+                right: AppSize.width20,
+                child: TextButton(
+                  onPressed: () {},
+                  child: Text(AppStrings.alreadyHaveAccount,
+                      style: getSemiBoldStyle(
+                        color: AppColors.primary,
+                      )),
+                ))
+            : const SizedBox(),
       ],
     );
   }
