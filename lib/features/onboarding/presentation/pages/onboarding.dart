@@ -116,7 +116,10 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 left: AppSize.width20,
                 right: AppSize.width20,
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushReplacementNamed(
+                        context, AppRoutes.loginRoute);
+                  },
                   child: Text(AppStrings.alreadyHaveAccount,
                       style: getSemiBoldStyle(
                         color: AppColors.primary,
