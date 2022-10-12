@@ -1,7 +1,5 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:nixo/config/routes/app_routes.dart';
 import 'package:nixo/core/utils/app_assets.dart';
 import 'package:nixo/core/utils/app_colors.dart';
@@ -21,7 +19,7 @@ class ForgetPasswordScreen extends StatefulWidget {
 class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
   Widget _buildingForgetPasswordBody() {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         image: DecorationImage(
           image: AssetImage(AssetsManager.authbackground),
         ),

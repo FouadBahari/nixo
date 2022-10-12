@@ -28,21 +28,60 @@ class _MainScreentState extends State<MainScreen> {
 
   @override
   Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: _buildAppBar(),
+        backgroundColor: AppColors.system,
+        body: _buildBottomNavBar());
+  }
+
+  _buildAppBar() {
+    return AppBar(
+      leading: IconButton(
+          onPressed: () {},
+          icon: Icon(
+            Icons.folder_outlined,
+            color: AppColors.appBarIConColor.withOpacity(0.7),
+          )),
+      actions: [
+        Row(
+          children: [
+            IconButton(
+              onPressed: () {},
+              icon: Icon(
+                Icons.search,
+                color: AppColors.appBarIConColor.withOpacity(0.7),
+              ),
+            ),
+            IconButton(
+              onPressed: () {},
+              icon: Icon(
+                Icons.notifications_outlined,
+                color: AppColors.appBarIConColor.withOpacity(0.7),
+              ),
+            )
+          ],
+        )
+      ],
+      backgroundColor: AppColors.system,
+      elevation: 0,
+    );
+  }
+
+  _buildBottomNavBar() {
     return PersistentTabView(
       context,
       controller: _presistentController,
       screens: _buildScreens(),
       items: _navBarsItems(),
       confineInSafeArea: true,
-      backgroundColor: Colors.white, // Default is Colors.white.
+      backgroundColor: AppColors.navbarColor, // Default is Colors.white.
       handleAndroidBackButtonPress: true, // Default is true.
       resizeToAvoidBottomInset:
           true, // This needs to be true if you want to move up the screen when keyboard appears. Default is true.
       stateManagement: true, // Default is true.
       hideNavigationBarWhenKeyboardShows:
           true, // Recommended to set 'resizeToAvoidBottomInset' as true while using this argument. Default is true.
-      decoration: NavBarDecoration(
-        borderRadius: BorderRadius.circular(10.0),
+      decoration: const NavBarDecoration(
         colorBehindNavBar: Colors.white,
       ),
       popAllScreensOnTapOfSelectedTab: true,
@@ -79,31 +118,31 @@ class _MainScreentState extends State<MainScreen> {
         icon: const Icon(Icons.home),
         title: ("Home"),
         activeColorPrimary: AppColors.primary,
-        inactiveColorPrimary: AppColors.white,
+        inactiveColorPrimary: AppColors.appBarIConColor,
       ),
       PersistentBottomNavBarItem(
         icon: const Icon(Icons.home),
         title: ("Calendar"),
         activeColorPrimary: AppColors.primary,
-        inactiveColorPrimary: AppColors.white,
+        inactiveColorPrimary: AppColors.appBarIConColor,
       ),
       PersistentBottomNavBarItem(
         icon: const Icon(Icons.home),
         title: ("Tasks"),
         activeColorPrimary: AppColors.primary,
-        inactiveColorPrimary: AppColors.white,
+        inactiveColorPrimary: AppColors.appBarIConColor,
       ),
       PersistentBottomNavBarItem(
         icon: const Icon(Icons.home),
         title: ("Pomodoro"),
         activeColorPrimary: AppColors.primary,
-        inactiveColorPrimary: AppColors.white,
+        inactiveColorPrimary: AppColors.appBarIConColor,
       ),
       PersistentBottomNavBarItem(
         icon: const Icon(Icons.settings),
         title: ("Settings"),
         activeColorPrimary: AppColors.primary,
-        inactiveColorPrimary: AppColors.white,
+        inactiveColorPrimary: AppColors.appBarIConColor,
       ),
     ];
   }

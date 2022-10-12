@@ -3,17 +3,17 @@ import 'package:flutter/material.dart';
 class AppColors {
   static Color system = HexColor.fromHex("#111133");
   static Color primary = HexColor.fromHex("#62E2FF");
+  static Color navbarColor = HexColor.fromHex("#080824");
   static Color secondary = HexColor.fromHex("#D8A3FF");
   static Color mistakes = HexColor.fromHex("#FF4958");
   static Color success = HexColor.fromHex("#B0D538");
-
+  static Color appBarIConColor = HexColor.fromHex("#DFFFFA");
 
   static Color black = HexColor.fromHex("#000000");
   static Color white = HexColor.fromHex("#FFFFFF");
   static Color fbcolor = HexColor.fromHex("#1877F2");
   static Color hint = Colors.grey;
   static Color transparent = Colors.transparent;
-
 }
 
 extension HexColor on Color {
