@@ -45,34 +45,6 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             left: 0,
             right: 0,
             child: Image.asset(AssetsManager.onboardbcgr)),
-
-        _currentPage == 3
-            ? Positioned(
-                bottom: AppSize.height100,
-                left: AppSize.width20,
-                right: AppSize.width20,
-                child: PrimaryButtom(
-                  onPressed: () {
-                    Navigator.pushReplacementNamed(
-                        context, AppRoutes.mainRoute);
-                  },
-                  title: AppStrings.newHere,
-                ))
-            : const SizedBox(),
-        _currentPage == 3
-            ? Positioned(
-                bottom: AppSize.height50,
-                left: AppSize.width20,
-                right: AppSize.width20,
-                child: TextButton(
-                  onPressed: () {},
-                  child: Text(AppStrings.alreadyHaveAccount,
-                      style: getSemiBoldStyle(
-                        color: AppColors.primary,
-                      )),
-                ))
-            : const SizedBox(),
-
         IntroductionScreen(
             globalBackgroundColor: Colors.transparent,
             isBottomSafeArea: true,
