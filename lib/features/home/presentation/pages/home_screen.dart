@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nixo/core/utils/app_colors.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -10,6 +11,8 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      color: AppColors.system,
+    );
   }
 }
