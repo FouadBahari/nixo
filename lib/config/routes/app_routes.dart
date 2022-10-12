@@ -35,7 +35,6 @@ class RouteGenerator {
       case AppRoutes.forgotPasswordRoute:
         return MaterialPageRoute(
             builder: ((context) => const ForgetPasswordScreen()));
-
       case AppRoutes.mainRoute:
         return MaterialPageRoute(builder: ((context) => const MainScreen()));
 

@@ -1,7 +1,5 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:nixo/config/routes/app_routes.dart';
 import 'package:nixo/core/utils/app_assets.dart';
 import 'package:nixo/core/utils/app_colors.dart';
@@ -21,7 +19,7 @@ class SignInScreen extends StatefulWidget {
 class _SignInScreenState extends State<SignInScreen> {
   Widget _buildSignInBody() {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         image: DecorationImage(
           image: AssetImage(AssetsManager.authbackground),
         ),
@@ -150,7 +148,10 @@ class _SignInScreenState extends State<SignInScreen> {
                     style: ElevatedButton.styleFrom(
                         backgroundColor: AppColors.fbcolor,
                         fixedSize: Size(AppSize.width10, AppSize.height50)),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushReplacementNamed(
+                          context, AppRoutes.mainRoute);
+                    },
                     child: Image.asset(AssetsManager.facebook),
                   ),
                 ),
