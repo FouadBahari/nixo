@@ -104,7 +104,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   child: PrimaryButtom(
                     onPressed: () {
                       Navigator.pushReplacementNamed(
-                          context, AppRoutes.registerRoute);
+                          context, AppRoutes.mainRoute);
                     },
                     title: AppStrings.newHere,
                   ),

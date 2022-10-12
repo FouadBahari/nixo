@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
 import 'package:nixo/core/utils/app_colors.dart';
+import 'package:nixo/core/utils/app_constants.dart';
+import 'package:nixo/core/utils/app_dimensions.dart';
+import 'package:nixo/core/utils/app_strings.dart';
 import 'package:nixo/features/Calendar/presentation/pages/calendar_screen.dart';
 import 'package:nixo/features/pomodoro/presentation/pages/pomodoro_screen.dart';
 import 'package:nixo/features/settings/presentation/pages/settings_screen.dart';
@@ -18,26 +22,48 @@ class MainScreen extends StatefulWidget {
 class _MainScreentState extends State<MainScreen> {
   final int _currentPage = 0;
   late PersistentTabController _presistentController;
+  late AdvancedDrawerController _advancedDrawerController;
 
   @override
   void initState() {
     _presistentController = PersistentTabController(initialIndex: _currentPage);
-
+    _advancedDrawerController = AdvancedDrawerController();
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: _buildAppBar(),
-        backgroundColor: AppColors.system,
-        body: _buildBottomNavBar());
+    return AdvancedDrawer(
+      drawer: _buildDrawer(),
+      controller: _advancedDrawerController,
+      backdropColor: AppColors.drawerColor,
+      animationCurve: Curves.easeInOut,
+      animationDuration:
+          const Duration(milliseconds: AppConstants.sliderAnimationTime),
+      animateChildDecoration: true,
+      rtlOpening: false,
+      openScale: 0.82,
+      disabledGestures: true,
+      childDecoration: const BoxDecoration(
+        borderRadius: BorderRadius.all(Radius.circular(16)),
+      ),
+      child: Scaffold(
+          appBar: _buildAppBar(),
+          backgroundColor: AppColors.system,
+          body: _buildBottomNavBar()),
+    );
+  }
+
+  void _showDrawer() {
+    _advancedDrawerController.showDrawer();
   }
 
   _buildAppBar() {
     return AppBar(
       leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            _showDrawer();
+          },
           icon: Icon(
             Icons.folder_outlined,
             color: AppColors.appBarIConColor.withOpacity(0.7),
@@ -64,6 +90,109 @@ class _MainScreentState extends State<MainScreen> {
       ],
       backgroundColor: AppColors.system,
       elevation: 0,
+    );
+  }
+
+  _buildDrawer() {
+    return SafeArea(
+      child: ExpansionTileTheme(
+        data: ExpansionTileThemeData(
+            textColor: AppColors.white,
+            iconColor: AppColors.white,
+            collapsedIconColor: AppColors.white,
+            collapsedTextColor: AppColors.white),
+        child: ListTileTheme(
+          textColor: AppColors.white,
+          iconColor: AppColors.white,
+          child: ListView(
+            physics: const AlwaysScrollableScrollPhysics(
+                parent: BouncingScrollPhysics()),
+            children: [
+              SizedBox(
+                height: AppSize.height80,
+              ),
+              ListTile(
+                onTap: () {},
+                leading: const Icon(Icons.wb_sunny_outlined),
+                title: const Text(AppStrings.myDayString),
+              ),
+              ListTile(
+                onTap: () {},
+                leading: const Icon(Icons.calendar_month_outlined),
+                title: const Text(AppStrings.plannedString),
+              ),
+              ExpansionTile(
+                leading: const Icon(Icons.category_outlined),
+                title: const Text(AppStrings.importanceString),
+                children: [
+                  ListTile(
+                    onTap: () {},
+                    leading: const Icon(Icons.category_outlined),
+                    title: const Text(AppStrings.urgentAndImportant),
+                    contentPadding: EdgeInsets.only(left: AppSize.height50),
+                  ),
+                  ListTile(
+                    onTap: () {},
+                    leading: const Icon(Icons.category_outlined),
+                    title: const Text(AppStrings.notUrgentAndImportant),
+                    contentPadding: EdgeInsets.only(left: AppSize.height50),
+                  ),
+                  ListTile(
+                    onTap: () {},
+                    leading: const Icon(Icons.category_outlined),
+                    title: const Text(AppStrings.urgentAndNotImportant),
+                    contentPadding: EdgeInsets.only(left: AppSize.height50),
+                  ),
+                  ListTile(
+                    onTap: () {},
+                    leading: const Icon(Icons.category_outlined),
+                    title: const Text(AppStrings.notUrgentAndNotImportant),
+                    contentPadding: EdgeInsets.only(left: AppSize.height50),
+                  ),
+                ],
+              ),
+              ListTile(
+                onTap: () {},
+                leading: const Icon(Icons.category_outlined),
+                title: const Text(AppStrings.tasks),
+              ),
+              ListTile(
+                onTap: () {},
+                leading: const Icon(Icons.category_outlined),
+                title: const Text(AppStrings.categoriesString),
+              ),
+              ListTile(
+                onTap: () {},
+                leading: const Icon(Icons.category_outlined),
+                title: const Text(AppStrings.goalsString),
+              ),
+              ListTile(
+                onTap: () {},
+                leading: const Icon(Icons.category_outlined),
+                title: const Text(AppStrings.habitsString),
+              ),
+              Padding(
+                padding: EdgeInsets.all(AppSize.width10),
+                child: Divider(
+                  color: AppColors.appBarIConColor,
+                ),
+              ),
+              DefaultTextStyle(
+                style: const TextStyle(
+                  fontSize: 12,
+                  color: Colors.white54,
+                ),
+                child: Container(
+                  margin: const EdgeInsets.symmetric(
+                    vertical: 16.0,
+                  ),
+                  // child: const Text('Terms of Service | Privacy Policy'),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 
@@ -116,32 +245,37 @@ class _MainScreentState extends State<MainScreen> {
     return [
       PersistentBottomNavBarItem(
         icon: const Icon(Icons.home),
-        title: ("Home"),
+        title: (AppStrings.home),
+        inactiveIcon: const Icon(Icons.home_outlined),
         activeColorPrimary: AppColors.primary,
         inactiveColorPrimary: AppColors.appBarIConColor,
       ),
       PersistentBottomNavBarItem(
-        icon: const Icon(Icons.home),
-        title: ("Calendar"),
+        icon: const Icon(Icons.calendar_month),
+        title: (AppStrings.calendar),
+        inactiveIcon: const Icon(Icons.calendar_month_outlined),
         activeColorPrimary: AppColors.primary,
         inactiveColorPrimary: AppColors.appBarIConColor,
       ),
       PersistentBottomNavBarItem(
-        icon: const Icon(Icons.home),
-        title: ("Tasks"),
+        icon: const Icon(Icons.category),
+        title: (AppStrings.tasks),
         activeColorPrimary: AppColors.primary,
+        inactiveIcon: const Icon(Icons.category_outlined),
         inactiveColorPrimary: AppColors.appBarIConColor,
       ),
       PersistentBottomNavBarItem(
-        icon: const Icon(Icons.home),
-        title: ("Pomodoro"),
+        icon: const Icon(Icons.timer),
+        title: (AppStrings.pomodoro),
         activeColorPrimary: AppColors.primary,
+        inactiveIcon: const Icon(Icons.timer_outlined),
         inactiveColorPrimary: AppColors.appBarIConColor,
       ),
       PersistentBottomNavBarItem(
         icon: const Icon(Icons.settings),
-        title: ("Settings"),
+        title: (AppStrings.settings),
         activeColorPrimary: AppColors.primary,
+        inactiveIcon: const Icon(Icons.settings_outlined),
         inactiveColorPrimary: AppColors.appBarIConColor,
       ),
     ];

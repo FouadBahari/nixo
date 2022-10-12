@@ -27,4 +27,6 @@ class AssetsManager {
   static const sun = '$imagePath/sun.png';
   static const tasks = '$imagePath/tasks.png';
   static const authbackground = '$imagePath/authbackground.png';
+  static const drawerBcr = '$imagePath/drawer_bcr.png';
+  static const overviewCard = '$imagePath/overviewCard.png';
 }

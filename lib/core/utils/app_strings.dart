@@ -35,9 +35,29 @@ class AppStrings {
   static const formore = 'for more informations.';
   static const forgetpassword = 'forget your password?';
   static const youdonthave = 'You dont have an account? ';
-  static const ressetpasswordtext = 'Enter Your Address Email to reset Your Password ';
+  static const ressetpasswordtext =
+      'Enter Your Address Email to reset Your Password ';
   static const signuptext =
       'Sign up to save your plans\n & track your progress';
   static const signintext =
       'Sign in to save your plans\n & track your progress';
+  static const myDayString = 'My day';
+  static const plannedString = 'planned';
+  static const importanceString = 'Importance';
+  static const tasksString = 'Tasks';
+  static const categoriesString = 'categories';
+  static const goalsString = 'Goals';
+  static const habitsString = 'Habits';
+  static const urgentAndImportant = 'U & I';
+  static const notUrgentAndImportant = 'NU & I';
+  static const urgentAndNotImportant = 'U & NI';
+  static const notUrgentAndNotImportant = 'NU & NI';
+  static const settings = 'Settings';
+  static const home = 'Home';
+  static const calendar = 'Calendar';
+  static const tasks = 'Tasks';
+  static const pomodoro = 'Pomodoro';
+  static const hello = 'Hello!';
+  static const overview = 'Overview';
+  static const productivity = 'Productivity';
 }

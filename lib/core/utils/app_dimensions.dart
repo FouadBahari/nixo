@@ -5,7 +5,7 @@ class AppSize {
   static double screenWidth = Get.context!.width;
 
   static double factorHeight = screenHeight / 844;
-  static double factorwidth = screenHeight / 390;
+  static double factorwidth = screenWidth / 390;
 
   static double height1_5 = 1.5 * factorHeight;
   static double height2 = 2 * factorHeight;
@@ -32,6 +32,7 @@ class AppSize {
   static double height120 = 120 * factorHeight;
   static double height140 = 140 * factorHeight;
   static double height150 = 150 * factorHeight;
+  static double height180 = 180 * factorHeight;
   static double height200 = 200 * factorHeight;
   static double height300 = 300 * factorHeight;
   static double height400 = 400 * factorHeight;
@@ -42,6 +43,7 @@ class AppSize {
   static double width1 = 1 * factorwidth;
   static double width2 = 2 * factorwidth;
   static double width5 = 5 * factorwidth;
+  static double width8 = 8 * factorwidth;
   static double width10 = 10 * factorwidth;
   static double width15 = 15 * factorwidth;
   static double width20 = 20 * factorwidth;
@@ -84,6 +86,7 @@ class AppFontSize {
   static double font22 = 22 * factorHeight;
   static double font25 = 25 * factorHeight;
   static double font30 = 30 * factorHeight;
+  static double font46 = 46 * factorHeight;
 }
 
 class AppMargin {
@@ -111,4 +114,5 @@ class AppPadding {
   static double p16 = 16.0 * factorHeight;
   static double p18 = 18.0 * factorHeight;
   static double p20 = 20.0 * factorHeight;
+  static double p24 = 24.0 * factorHeight;
 }
