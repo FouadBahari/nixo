@@ -10,6 +10,10 @@ class AppColors {
   static Color appBarIConColor = HexColor.fromHex("#DFFFFA");
   static Color drawerColor = HexColor.fromHex("#002D37");
 
+  static Color boxColor = HexColor.fromHex("#295070");
+  static Color redTitle = HexColor.fromHex("#FEC3B5");
+
+
   static Color black = HexColor.fromHex("#000000");
   static Color white = HexColor.fromHex("#FFFFFF");
   static Color fbcolor = HexColor.fromHex("#1877F2");

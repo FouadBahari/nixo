@@ -32,6 +32,9 @@ dependencies:
   shared_preferences: ^2.0.15
   appinio_swiper: ^1.1.0
   
+  calendar_timeline: ^1.0.5
+  flutter_slidable: ^2.0.0
+
 dev_dependencies:
   change_app_package_name: ^1.1.0
 

@@ -87,8 +87,7 @@ class _SignupScreenState extends State<SignupScreen> {
                     TextSpan(
                         recognizer: TapGestureRecognizer()
                           ..onTap = () {
-                            Navigator.pushReplacementNamed(
-                                context, AppRoutes.loginRoute);
+                            Navigator.pushNamed(context, AppRoutes.loginRoute);
                           },
                         text: AppStrings.login,
                         style: getMediumStyle(
@@ -116,8 +115,11 @@ class _SignupScreenState extends State<SignupScreen> {
             SizedBox(
               height: AppSize.height50,
               width: double.infinity,
-              child:
-                  PrimaryButtom(onPressed: () {}, title: AppStrings.conttinue),
+              child: PrimaryButtom(
+                  onPressed: () {
+                    Navigator.pushNamed(context, AppRoutes.mainRoute);
+                  },
+                  title: AppStrings.conttinue),
             ),
             SizedBox(
               height: AppSize.height40,

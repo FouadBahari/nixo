@@ -89,8 +89,7 @@ class _SignInScreenState extends State<SignInScreen> {
               alignment: Alignment.topRight,
               child: GestureDetector(
                 onTap: () {
-                  Navigator.pushReplacementNamed(
-                      context, AppRoutes.forgotPasswordRoute);
+                  Navigator.pushNamed(context, AppRoutes.forgotPasswordRoute);
                 },
                 child: Text(
                   AppStrings.forgetpassword,
@@ -129,7 +128,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     TextSpan(
                         recognizer: TapGestureRecognizer()
                           ..onTap = () {
-                            Navigator.pushReplacementNamed(
+                            Navigator.pushNamed(
                                 context, AppRoutes.registerRoute);
                           },
                         text: AppStrings.signup,

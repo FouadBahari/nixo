@@ -27,6 +27,7 @@ class AppSize {
   static double height55 = 55 * factorHeight;
   static double height60 = 60 * factorHeight;
   static double height61 = 61 * factorHeight;
+  static double height62 = 62 * factorHeight;
   static double height80 = 80 * factorHeight;
   static double height100 = 100 * factorHeight;
   static double height120 = 120 * factorHeight;
@@ -54,6 +55,7 @@ class AppSize {
   static double width40 = 40 * factorwidth;
   static double width45 = 45 * factorwidth;
   static double width50 = 50 * factorwidth;
+  static double width60 = 60 * factorwidth;
   static double width100 = 100 * factorwidth;
   static double width120 = 120 * factorwidth;
   static double width150 = 150 * factorwidth;
@@ -100,6 +102,7 @@ class AppMargin {
   static double m18 = 18.0 * factorHeight;
   static double m20 = 20.0 * factorHeight;
   static double m24 = 24.0 * factorHeight;
+  static double m30 = 30.0 * factorHeight;
   static double m40 = 40.0 * factorHeight;
   static double m50 = 50.0 * factorHeight;
 }
