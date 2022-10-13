@@ -11,8 +11,8 @@ class AppColors {
   static Color drawerColor = HexColor.fromHex("#002D37");
 
   static Color boxColor = HexColor.fromHex("#295070");
+  static Color boxColor2 = HexColor.fromHex("#D9D9D9");
   static Color redTitle = HexColor.fromHex("#FEC3B5");
-
 
   static Color black = HexColor.fromHex("#000000");
   static Color white = HexColor.fromHex("#FFFFFF");
