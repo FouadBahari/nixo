@@ -1,5 +1,6 @@
 import 'package:appinio_swiper/appinio_swiper.dart';
 import 'package:flutter/material.dart';
+import 'package:nixo/config/routes/app_routes.dart';
 import 'package:nixo/core/utils/app_colors.dart';
 import 'package:nixo/core/utils/app_dimensions.dart';
 import 'package:nixo/core/utils/app_strings.dart';
@@ -15,6 +16,8 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  final AppinioSwiperController controller = AppinioSwiperController();
+
   bool _isClicked = true;
 
   _click(bool value) {
@@ -48,10 +51,26 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   var cards = [
-    OverviewCard(),
-    OverviewCard(),
-    OverviewCard(),
+    const OverviewCard(),
+    const OverviewCard(),
+    const OverviewCard(),
   ];
+
+  void _swipe(int index, AppinioSwiperDirection direction) {
+    var card = cards[index];
+    setState(() {
+      cards.removeAt(index);
+      cards.add(card);
+    });
+  }
+
+  void _unswipe(bool unswiped) {
+    if (unswiped) {
+      print("SUCCESS: card was unswiped");
+    } else {
+      print("FAIL: no card left to unswipe");
+    }
+  }
 
   _buildOverviewContent() {
     return Column(
@@ -61,6 +80,10 @@ class _HomeScreenState extends State<HomeScreen> {
           width: double.infinity,
           child: AppinioSwiper(
             cards: cards,
+            unlimitedUnswipe: false,
+            controller: controller,
+            unswipe: _unswipe,
+            onSwipe: _swipe,
           ),
         ),
       ],
@@ -68,13 +91,13 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   _buildProductivityContent() {
-    return SizedBox();
+    return const SizedBox();
   }
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(AppPadding.p24),
+      padding: EdgeInsets.all(AppSize.p24),
       color: AppColors.system,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -82,7 +105,7 @@ class _HomeScreenState extends State<HomeScreen> {
           Text(
             '${AppStrings.hello}\nSeifou',
             style: getSemiBoldStyle(
-                color: AppColors.white, fontSize: AppFontSize.font46),
+                color: AppColors.white, fontSize: AppSize.font46),
           ),
           SizedBox(height: AppSize.height20),
           _buildTabButtons(),

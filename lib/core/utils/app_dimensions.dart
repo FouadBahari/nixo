@@ -1,8 +1,13 @@
-import 'package:get/get.dart';
+import 'package:flutter/material.dart';
 
 class AppSize {
-  static double screenHeight = Get.context!.height;
-  static double screenWidth = Get.context!.width;
+  static double screenHeight = 0;
+  static double screenWidth = 0;
+
+  static getScreenSize(BuildContext context) {
+    screenHeight = MediaQuery.of(context).size.height;
+    screenWidth = MediaQuery.of(context).size.width;
+  }
 
   static double factorHeight = screenHeight / 844;
   static double factorwidth = screenWidth / 390;
@@ -68,13 +73,8 @@ class AppSize {
   static double radius25 = 25 * factorHeight;
   static double radius30 = 30 * factorHeight;
   static double radius35 = 35 * factorHeight;
-}
 
-class AppFontSize {
-  static double screenHeight = Get.context!.height;
-  static double factorHeight = screenHeight / 844;
-
-  //
+  //font
   static double font8 = 8 * factorHeight;
   static double font10 = 10 * factorHeight;
   static double font12 = 12 * factorHeight;
@@ -89,12 +89,8 @@ class AppFontSize {
   static double font25 = 25 * factorHeight;
   static double font30 = 30 * factorHeight;
   static double font46 = 46 * factorHeight;
-}
 
-class AppMargin {
-  static double screenHeight = Get.context!.height;
-  static double factorHeight = screenHeight / 844;
-
+  //margins
   static double m8 = 8.0 * factorHeight;
   static double m12 = 12.0 * factorHeight;
   static double m14 = 14.0 * factorHeight;
@@ -105,11 +101,8 @@ class AppMargin {
   static double m30 = 30.0 * factorHeight;
   static double m40 = 40.0 * factorHeight;
   static double m50 = 50.0 * factorHeight;
-}
 
-class AppPadding {
-  static double screenHeight = Get.context!.height;
-  static double factorHeight = screenHeight / 844;
+  //padding
 
   static double p8 = 8.0 * factorHeight;
   static double p12 = 12.0 * factorHeight;

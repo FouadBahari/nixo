@@ -30,9 +30,9 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
         imagePadding: EdgeInsets.only(top: AppSize.height60),
         pageColor: Colors.transparent,
         bodyTextStyle: getRegularStyle(
-            color: AppColors.white, fontSize: AppFontSize.font16),
+            color: AppColors.white, fontSize: AppSize.font16),
         titleTextStyle: getSemiBoldStyle(
-            color: AppColors.white, fontSize: AppFontSize.font25),
+            color: AppColors.white, fontSize: AppSize.font25),
         titlePadding: EdgeInsets.only(top: AppSize.height100),
         bodyPadding: EdgeInsets.only(top: AppSize.height40));
   }

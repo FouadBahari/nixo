@@ -26,7 +26,7 @@ class _SignupScreenState extends State<SignupScreen> {
       ),
       child: Container(
         margin: EdgeInsets.only(
-            top: AppMargin.m50, left: AppMargin.m24, right: AppMargin.m24),
+            top: AppSize.m50, left: AppSize.m24, right: AppSize.m24),
         child: Column(
           children: [
             GestureDetector(
@@ -47,7 +47,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   Text(
                     AppStrings.back,
                     style: getRegularStyle(
-                        color: AppColors.white, fontSize: AppFontSize.font17),
+                        color: AppColors.white, fontSize: AppSize.font17),
                   )
                 ],
               ),
@@ -59,7 +59,7 @@ class _SignupScreenState extends State<SignupScreen> {
               AppStrings.signup,
               style: getSemiBoldStyle(
                 color: AppColors.white,
-                fontSize: AppFontSize.font19,
+                fontSize: AppSize.font19,
               ),
             ),
             SizedBox(
@@ -70,7 +70,7 @@ class _SignupScreenState extends State<SignupScreen> {
               textAlign: TextAlign.center,
               style: getBoldStyle(
                 color: AppColors.white,
-                fontSize: AppFontSize.font21,
+                fontSize: AppSize.font21,
               ),
             ),
             SizedBox(
@@ -81,7 +81,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   text: AppStrings.alreadyHaveAcc,
                   style: getMediumStyle(
                     color: AppColors.white,
-                    fontSize: AppFontSize.font17,
+                    fontSize: AppSize.font17,
                   ),
                   children: [
                     TextSpan(
@@ -92,7 +92,7 @@ class _SignupScreenState extends State<SignupScreen> {
                         text: AppStrings.login,
                         style: getMediumStyle(
                           color: AppColors.primary,
-                          fontSize: AppFontSize.font17,
+                          fontSize: AppSize.font17,
                         ))
                   ]),
             ),
@@ -157,14 +157,14 @@ class _SignupScreenState extends State<SignupScreen> {
                   text: AppStrings.iagree,
                   style: getMediumStyle(
                     color: AppColors.white,
-                    fontSize: AppFontSize.font14,
+                    fontSize: AppSize.font14,
                   ),
                   children: [
                     TextSpan(
                         text: AppStrings.terms,
                         style: getMediumStyle(
                           color: AppColors.primary,
-                          fontSize: AppFontSize.font14,
+                          fontSize: AppSize.font14,
                         ))
                   ]),
             ),
@@ -173,21 +173,21 @@ class _SignupScreenState extends State<SignupScreen> {
                   text: AppStrings.seeour,
                   style: getMediumStyle(
                     color: AppColors.white,
-                    fontSize: AppFontSize.font14,
+                    fontSize: AppSize.font14,
                   ),
                   children: [
                     TextSpan(
                       text: AppStrings.privacypolicy,
                       style: getMediumStyle(
                         color: AppColors.primary,
-                        fontSize: AppFontSize.font14,
+                        fontSize: AppSize.font14,
                       ),
                     ),
                     TextSpan(
                       text: AppStrings.formore,
                       style: getMediumStyle(
                         color: AppColors.white,
-                        fontSize: AppFontSize.font14,
+                        fontSize: AppSize.font14,
                       ),
                     ),
                   ]),

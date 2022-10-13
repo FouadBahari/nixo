@@ -16,7 +16,7 @@ class PrimaryButtom extends StatelessWidget {
       child: Text(
         title,
         style: getSemiBoldStyle(
-            color: AppColors.black, fontSize: AppFontSize.font16),
+            color: AppColors.black, fontSize: AppSize.font16),
       ),
     );
   }

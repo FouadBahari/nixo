@@ -27,7 +27,7 @@ class ToDoItemWidget extends StatelessWidget {
     return Container(
       height: AppSize.height62,
       margin: EdgeInsets.only(
-          left: AppMargin.m24, right: AppMargin.m24, bottom: AppMargin.m12),
+          left: AppSize.m24, right: AppSize.m24, bottom: AppSize.m12),
       child: ClipRRect(
         clipBehavior: Clip.hardEdge,
         child: Slidable(
@@ -49,7 +49,7 @@ class ToDoItemWidget extends StatelessWidget {
                   title: Text(name,
                       style: getSemiBoldStyle(
                           color: AppColors.white,
-                          fontSize: AppFontSize.font14)),
+                          fontSize: AppSize.font14)),
                   tileColor: AppColors.boxColor,
                   leading: isChecked
                       ? Icon(
@@ -72,7 +72,7 @@ class ToDoItemWidget extends StatelessWidget {
                       catName,
                       style: getSemiBoldStyle(
                           color: AppColors.redTitle,
-                          fontSize: AppFontSize.font10),
+                          fontSize: AppSize.font10),
                     ),
                   ),
                 ),
@@ -85,7 +85,7 @@ class ToDoItemWidget extends StatelessWidget {
                   Text(hour,
                       style: getMediumStyle(
                           color: AppColors.primary,
-                          fontSize: AppFontSize.font12)),
+                          fontSize: AppSize.font12)),
                   SizedBox(
                     height: AppSize.height5,
                   ),
@@ -93,7 +93,7 @@ class ToDoItemWidget extends StatelessWidget {
                     timing,
                     style: getMediumStyle(
                       color: AppColors.primary,
-                      fontSize: AppFontSize.font12,
+                      fontSize: AppSize.font12,
                     ),
                   )
                 ],
