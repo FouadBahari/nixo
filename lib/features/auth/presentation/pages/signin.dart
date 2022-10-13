@@ -26,7 +26,7 @@ class _SignInScreenState extends State<SignInScreen> {
       ),
       child: Container(
         margin: EdgeInsets.only(
-            top: AppMargin.m50, left: AppMargin.m24, right: AppMargin.m24),
+            top: AppSize.m50, left: AppSize.m24, right: AppSize.m24),
         child: Column(
           children: [
             GestureDetector(
@@ -47,7 +47,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   Text(
                     AppStrings.back,
                     style: getRegularStyle(
-                        color: AppColors.white, fontSize: AppFontSize.font17),
+                        color: AppColors.white, fontSize: AppSize.font17),
                   )
                 ],
               ),
@@ -59,7 +59,7 @@ class _SignInScreenState extends State<SignInScreen> {
               AppStrings.login,
               style: getSemiBoldStyle(
                 color: AppColors.white,
-                fontSize: AppFontSize.font19,
+                fontSize: AppSize.font19,
               ),
             ),
             SizedBox(
@@ -70,7 +70,7 @@ class _SignInScreenState extends State<SignInScreen> {
               textAlign: TextAlign.center,
               style: getBoldStyle(
                 color: AppColors.white,
-                fontSize: AppFontSize.font21,
+                fontSize: AppSize.font21,
               ),
             ),
             SizedBox(
@@ -94,7 +94,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 child: Text(
                   AppStrings.forgetpassword,
                   style: getMediumStyle(
-                      color: AppColors.primary, fontSize: AppFontSize.font17),
+                      color: AppColors.primary, fontSize: AppSize.font17),
                 ),
               ),
             ),
@@ -112,7 +112,7 @@ class _SignInScreenState extends State<SignInScreen> {
             Text(
               AppStrings.or,
               style: getMediumStyle(
-                  color: AppColors.white, fontSize: AppFontSize.font17),
+                  color: AppColors.white, fontSize: AppSize.font17),
             ),
             SizedBox(
               height: AppSize.height20,
@@ -122,7 +122,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   text: AppStrings.youdonthave,
                   style: getMediumStyle(
                     color: AppColors.white,
-                    fontSize: AppFontSize.font17,
+                    fontSize: AppSize.font17,
                   ),
                   children: [
                     TextSpan(
@@ -134,7 +134,7 @@ class _SignInScreenState extends State<SignInScreen> {
                         text: AppStrings.signup,
                         style: getMediumStyle(
                           color: AppColors.primary,
-                          fontSize: AppFontSize.font17,
+                          fontSize: AppSize.font17,
                         ))
                   ]),
             ),
