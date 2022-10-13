@@ -49,7 +49,7 @@ class _SplashScreenState extends State<SplashScreen> {
         Text(
           AppStrings.appName,
           style: getSemiBoldStyle(
-              color: AppColors.white, fontSize: AppFontSize.font22 * 2),
+              color: AppColors.white, fontSize: AppSize.font22 * 2),
         ),
         const Expanded(child: Text('')),
         Center(
@@ -62,6 +62,8 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
+    AppSize.getScreenSize(context);
+
     return Scaffold(
       backgroundColor: AppColors.system,
       body: _buildSplashScreenBody(),

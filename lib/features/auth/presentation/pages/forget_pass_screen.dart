@@ -26,7 +26,7 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
       ),
       child: Container(
         margin: EdgeInsets.only(
-            top: AppMargin.m50, left: AppMargin.m24, right: AppMargin.m24),
+            top: AppSize.m50, left: AppSize.m24, right: AppSize.m24),
         child: Column(
           children: [
             GestureDetector(
@@ -46,7 +46,7 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
                   Text(
                     AppStrings.back,
                     style: getRegularStyle(
-                        color: AppColors.white, fontSize: AppFontSize.font17),
+                        color: AppColors.white, fontSize: AppSize.font17),
                   )
                 ],
               ),
@@ -58,7 +58,7 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
               AppStrings.resetpassword,
               style: getSemiBoldStyle(
                 color: AppColors.white,
-                fontSize: AppFontSize.font19,
+                fontSize: AppSize.font19,
               ),
             ),
             SizedBox(
@@ -69,7 +69,7 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
               textAlign: TextAlign.center,
               style: getBoldStyle(
                 color: AppColors.white,
-                fontSize: AppFontSize.font21,
+                fontSize: AppSize.font21,
               ),
             ),
             SizedBox(
@@ -92,7 +92,7 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
                   text: AppStrings.youdonthave,
                   style: getMediumStyle(
                     color: AppColors.white,
-                    fontSize: AppFontSize.font17,
+                    fontSize: AppSize.font17,
                   ),
                   children: [
                     TextSpan(
@@ -104,7 +104,7 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
                         text: AppStrings.signup,
                         style: getMediumStyle(
                           color: AppColors.primary,
-                          fontSize: AppFontSize.font17,
+                          fontSize: AppSize.font17,
                         ))
                   ]),
             ),

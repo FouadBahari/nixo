@@ -21,7 +21,7 @@ class AppConstants {
               msg,
               style: TextStyle(
                 color: AppColors.black,
-                fontSize: AppFontSize.font16,
+                fontSize: AppSize.font16,
               ),
             ),
             actions: [
@@ -30,7 +30,7 @@ class AppConstants {
                 style: TextButton.styleFrom(
                   textStyle: TextStyle(
                     color: AppColors.black,
-                    fontSize: AppFontSize.font16,
+                    fontSize: AppSize.font16,
                     fontWeight: FontWeightManager.bold,
                   ),
                 ),
