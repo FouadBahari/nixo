@@ -29,6 +29,7 @@ dependencies:
   introduction_screen: ^3.0.2
   persistent_bottom_nav_bar: ^5.0.2
   shared_preferences: ^2.0.15
+  circular_countdown_timer: ^0.2.2
   
   calendar_timeline: ^1.0.5
   flutter_slidable: ^2.0.0
