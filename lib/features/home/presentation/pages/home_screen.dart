@@ -104,8 +104,6 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Container(
       color: AppColors.system,
-      padding: EdgeInsets.only(
-          top: AppSize.p24, left: AppSize.p24, right: AppSize.p24),
       child: CustomScrollView(
         physics: const BouncingScrollPhysics(),
         slivers: [

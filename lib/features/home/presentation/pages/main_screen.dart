@@ -197,35 +197,38 @@ class _MainScreentState extends State<MainScreen> {
   }
 
   _buildBottomNavBar() {
-    return PersistentTabView(
-      context,
-      controller: _presistentController,
-      screens: _buildScreens(),
-      items: _navBarsItems(),
-      confineInSafeArea: true,
+    return Padding(
+      padding: EdgeInsets.only(top: 24, left: 24, right: 24),
+      child: PersistentTabView(
+        context,
+        controller: _presistentController,
+        screens: _buildScreens(),
+        items: _navBarsItems(),
+        confineInSafeArea: true,
 
-      backgroundColor: AppColors.navbarColor, // Default is Colors.white.
-      handleAndroidBackButtonPress: true, // Default is true.
-      resizeToAvoidBottomInset:
-          true, // This needs to be true if you want to move up the screen when keyboard appears. Default is true.
-      hideNavigationBarWhenKeyboardShows:
-          true, // Recommended to set 'resizeToAvoidBottomInset' as true while using this argument. Default is true.
-      decoration: const NavBarDecoration(
-        colorBehindNavBar: Colors.white,
+        backgroundColor: AppColors.navbarColor, // Default is Colors.white.
+        handleAndroidBackButtonPress: true, // Default is true.
+        resizeToAvoidBottomInset:
+            true, // This needs to be true if you want to move up the screen when keyboard appears. Default is true.
+        hideNavigationBarWhenKeyboardShows:
+            true, // Recommended to set 'resizeToAvoidBottomInset' as true while using this argument. Default is true.
+        decoration: const NavBarDecoration(
+          colorBehindNavBar: Colors.white,
+        ),
+        itemAnimationProperties: const ItemAnimationProperties(
+          // Navigation Bar's items animation properties.
+          duration: Duration(milliseconds: 200),
+          curve: Curves.ease,
+        ),
+        screenTransitionAnimation: const ScreenTransitionAnimation(
+          // Screen transition animation on change of selected tab.
+          animateTabTransition: true,
+          curve: Curves.ease,
+          duration: Duration(milliseconds: 200),
+        ),
+        navBarStyle: NavBarStyle.style1,
+        // Choose the nav bar style with this property.
       ),
-      itemAnimationProperties: const ItemAnimationProperties(
-        // Navigation Bar's items animation properties.
-        duration: Duration(milliseconds: 200),
-        curve: Curves.ease,
-      ),
-      screenTransitionAnimation: const ScreenTransitionAnimation(
-        // Screen transition animation on change of selected tab.
-        animateTabTransition: true,
-        curve: Curves.ease,
-        duration: Duration(milliseconds: 200),
-      ),
-      navBarStyle: NavBarStyle.style1,
-      // Choose the nav bar style with this property.
     );
   }
 

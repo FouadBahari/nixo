@@ -23,8 +23,7 @@ class ToDoItemWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: AppSize.height62,
-      margin: EdgeInsets.only(
-          left: AppSize.m24, right: AppSize.m24, bottom: AppSize.m12),
+      margin: EdgeInsets.only(bottom: AppSize.m12),
       child: ClipRRect(
         clipBehavior: Clip.hardEdge,
         child: Slidable(
