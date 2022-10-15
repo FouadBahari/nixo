@@ -60,4 +60,8 @@ class AppStrings {
   static const hello = 'Hello!';
   static const overview = 'Overview';
   static const productivity = 'Productivity';
+  static const priorityTaskProgress = 'Priority task progress';
+  static const completed = 'Completed';
+  static const date = 'Today , 27 september ,Tue';
+  static const seeAll = 'See All';
 }

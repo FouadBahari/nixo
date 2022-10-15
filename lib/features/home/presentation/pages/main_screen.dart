@@ -203,6 +203,7 @@ class _MainScreentState extends State<MainScreen> {
       screens: _buildScreens(),
       items: _navBarsItems(),
       confineInSafeArea: true,
+
       backgroundColor: AppColors.navbarColor, // Default is Colors.white.
       handleAndroidBackButtonPress: true, // Default is true.
       resizeToAvoidBottomInset:
@@ -223,10 +224,8 @@ class _MainScreentState extends State<MainScreen> {
         curve: Curves.ease,
         duration: Duration(milliseconds: 200),
       ),
-      navBarStyle:
-          NavBarStyle.style1, 
+      navBarStyle: NavBarStyle.style1,
       // Choose the nav bar style with this property.
-
     );
   }
 

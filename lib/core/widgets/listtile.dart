@@ -1,7 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:nixo/core/utils/app_colors.dart';
 import 'package:nixo/core/utils/app_dimensions.dart';
@@ -48,8 +45,7 @@ class ToDoItemWidget extends StatelessWidget {
                       borderRadius: BorderRadius.circular(AppSize.radius20)),
                   title: Text(name,
                       style: getSemiBoldStyle(
-                          color: AppColors.white,
-                          fontSize: AppSize.font14)),
+                          color: AppColors.white, fontSize: AppSize.font14)),
                   tileColor: AppColors.boxColor,
                   leading: isChecked
                       ? Icon(
@@ -71,8 +67,7 @@ class ToDoItemWidget extends StatelessWidget {
                     child: Text(
                       catName,
                       style: getSemiBoldStyle(
-                          color: AppColors.redTitle,
-                          fontSize: AppSize.font10),
+                          color: AppColors.redTitle, fontSize: AppSize.font10),
                     ),
                   ),
                 ),
@@ -84,8 +79,7 @@ class ToDoItemWidget extends StatelessWidget {
                 children: [
                   Text(hour,
                       style: getMediumStyle(
-                          color: AppColors.primary,
-                          fontSize: AppSize.font12)),
+                          color: AppColors.primary, fontSize: AppSize.font12)),
                   SizedBox(
                     height: AppSize.height5,
                   ),

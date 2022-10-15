@@ -1,11 +1,11 @@
-import 'package:appinio_swiper/appinio_swiper.dart';
 import 'package:flutter/material.dart';
-import 'package:nixo/config/routes/app_routes.dart';
 import 'package:nixo/core/utils/app_colors.dart';
 import 'package:nixo/core/utils/app_dimensions.dart';
 import 'package:nixo/core/utils/app_strings.dart';
 import 'package:nixo/core/utils/app_styles.dart';
+import 'package:nixo/core/widgets/listtile.dart';
 import 'package:nixo/core/widgets/primary_btn.dart';
+import 'package:nixo/features/home/presentation/widgets/analyticsWidget.dart';
 import 'package:nixo/features/home/presentation/widgets/overview_card.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -16,9 +16,8 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  final AppinioSwiperController controller = AppinioSwiperController();
-
   bool _isClicked = true;
+  bool _isLast = false;
 
   _click(bool value) {
     setState(() {
@@ -50,65 +49,83 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  var cards = [
-    const OverviewCard(),
-    const OverviewCard(),
-    const OverviewCard(),
-  ];
-
-  void _swipe(int index, AppinioSwiperDirection direction) {
-    var card = cards[index];
-    setState(() {
-      cards.removeAt(index);
-      cards.add(card);
-    });
-  }
-
-  void _unswipe(bool unswiped) {
-    if (unswiped) {
-      print("SUCCESS: card was unswiped");
-    } else {
-      print("FAIL: no card left to unswipe");
-    }
-  }
-
   _buildOverviewContent() {
-    return Column(
-      children: [
-        SizedBox(
-          height: AppSize.height200,
-          width: double.infinity,
-          child: AppinioSwiper(
-            cards: cards,
-            unlimitedUnswipe: false,
-            controller: controller,
-            unswipe: _unswipe,
-            onSwipe: _swipe,
-          ),
-        ),
-      ],
-    );
+    return SliverList(
+        delegate: SliverChildBuilderDelegate(
+      (_, index) {
+        if (index == 0) {
+          return Column(
+            children: [
+              const OverviewCard(),
+              SizedBox(
+                height: AppSize.height10,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    AppStrings.date,
+                    style: getSemiBoldStyle(color: AppColors.white),
+                  ),
+                  Text(
+                    AppStrings.seeAll,
+                    style: getSemiBoldStyle(color: AppColors.primary),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: AppSize.height20,
+              ),
+            ],
+          );
+        }
+        return ToDoItemWidget(
+            name: "Quraan Reading",
+            catName: 'Work',
+            hour: '12:20 AM',
+            isChecked: true,
+            timing: '13 min');
+      },
+      childCount: 10,
+    ));
   }
 
   _buildProductivityContent() {
-    return const SizedBox();
+    return SliverList(
+        delegate: SliverChildBuilderDelegate(
+      (_, index) {
+        return AnalyticsWidget();
+      },
+      childCount: 10,
+    ));
   }
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(AppSize.p24),
       color: AppColors.system,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            '${AppStrings.hello}\nSeifou',
-            style: getSemiBoldStyle(
-                color: AppColors.white, fontSize: AppSize.font46),
+      padding: EdgeInsets.only(
+          top: AppSize.p24, left: AppSize.p24, right: AppSize.p24),
+      child: CustomScrollView(
+        physics: const BouncingScrollPhysics(),
+        slivers: [
+          SliverAppBar(
+            backgroundColor: AppColors.system,
+            expandedHeight: AppSize.height220,
+            collapsedHeight: AppSize.height200,
+            flexibleSpace: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  '${AppStrings.hello}\nSeifou',
+                  style: getSemiBoldStyle(
+                      color: AppColors.white, fontSize: AppSize.font46),
+                ),
+                SizedBox(height: AppSize.height20),
+                _buildTabButtons(),
+              ],
+            ),
           ),
-          SizedBox(height: AppSize.height20),
-          _buildTabButtons(),
           _isClicked ? _buildOverviewContent() : _buildProductivityContent(),
         ],
       ),
