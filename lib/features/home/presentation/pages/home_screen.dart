@@ -100,8 +100,7 @@ class _HomeScreenState extends State<HomeScreen> {
     ));
   }
 
-  @override
-  Widget build(BuildContext context) {
+  _buildHomeScreen() {
     return Container(
       color: AppColors.system,
       padding: EdgeInsets.only(
@@ -130,5 +129,10 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
       ),
     );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return _buildHomeScreen();
   }
 }

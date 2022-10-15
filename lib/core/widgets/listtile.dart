@@ -23,8 +23,7 @@ class ToDoItemWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: AppSize.height62,
-      margin: EdgeInsets.only(
-          left: AppSize.m24, right: AppSize.m24, bottom: AppSize.m12),
+      margin: EdgeInsets.only(bottom: AppSize.m12),
       child: ClipRRect(
         clipBehavior: Clip.hardEdge,
         child: Slidable(
@@ -43,7 +42,6 @@ class ToDoItemWidget extends StatelessWidget {
                   decoration: BoxDecoration(
                       color: AppColors.boxColor,
                       borderRadius: BorderRadius.circular(AppSize.radius20)),
-
                   child: ListTile(
                     iconColor: AppColors.success,
                     shape: RoundedRectangleBorder(
@@ -75,9 +73,6 @@ class ToDoItemWidget extends StatelessWidget {
                             color: AppColors.redTitle,
                             fontSize: AppSize.font10),
                       ),
-
- 
-
                     ),
                   ),
                 ),
@@ -86,6 +81,7 @@ class ToDoItemWidget extends StatelessWidget {
                 width: AppSize.width5,
               ),
               Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(hour,
                       style: getMediumStyle(

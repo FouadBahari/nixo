@@ -48,73 +48,77 @@ class _CalendarScreenState extends State<CalendarScreen> {
           height: AppSize.height20,
         ),
         Expanded(
-          child: ListView(
-            physics: const BouncingScrollPhysics(
-              parent: AlwaysScrollableScrollPhysics(),
+          child: Padding(
+            padding: EdgeInsets.only(
+                top: AppSize.p24, left: AppSize.p24, right: AppSize.p24),
+            child: ListView(
+              physics: const BouncingScrollPhysics(
+                parent: AlwaysScrollableScrollPhysics(),
+              ),
+              shrinkWrap: true,
+              children: [
+                ToDoItemWidget(
+                    name: "Quraan Reading",
+                    catName: 'Work',
+                    hour: '12:20 AM',
+                    isChecked: true,
+                    timing: '13 min'),
+                ToDoItemWidget(
+                    name: "Buy Bread",
+                    catName: 'Work',
+                    hour: '12:20 AM',
+                    isChecked: true,
+                    timing: '13 min'),
+                ToDoItemWidget(
+                    name: "Create A Logo",
+                    catName: 'Work',
+                    hour: '12:20 AM',
+                    isChecked: false,
+                    timing: '13 min'),
+                ToDoItemWidget(
+                    name: "Go to gym",
+                    catName: 'Work',
+                    hour: '12:20 AM',
+                    isChecked: true,
+                    timing: '13 min'),
+                ToDoItemWidget(
+                    name: "Buy Bread",
+                    catName: 'Work',
+                    hour: '12:20 AM',
+                    isChecked: true,
+                    timing: '13 min'),
+                ToDoItemWidget(
+                    name: "Create A Logo",
+                    catName: 'Work',
+                    hour: '12:20 AM',
+                    isChecked: false,
+                    timing: '13 min'),
+                ToDoItemWidget(
+                    name: "Go to gym",
+                    catName: 'Work',
+                    hour: '12:20 AM',
+                    isChecked: true,
+                    timing: '13 min'),
+                ToDoItemWidget(
+                    name: "Buy Bread",
+                    catName: 'Work',
+                    hour: '12:20 AM',
+                    isChecked: true,
+                    timing: '13 min'),
+                ToDoItemWidget(
+                    name: "Create A Logo",
+                    catName: 'Work',
+                    hour: '12:20 AM',
+                    isChecked: false,
+                    timing: '13 min'),
+                ToDoItemWidget(
+                    name: "Go to gym",
+                    catName: 'Work',
+                    hour: '12:20 AM',
+                    isChecked: true,
+                    timing: '13 min'),
+              ],
             ),
-            shrinkWrap: true,
-            children: [
-              ToDoItemWidget(
-                  name: "Quraan Reading",
-                  catName: 'Work',
-                  hour: '12:20 AM',
-                  isChecked: true,
-                  timing: '13 min'),
-              ToDoItemWidget(
-                  name: "Buy Bread",
-                  catName: 'Work',
-                  hour: '12:20 AM',
-                  isChecked: true,
-                  timing: '13 min'),
-              ToDoItemWidget(
-                  name: "Create A Logo",
-                  catName: 'Work',
-                  hour: '12:20 AM',
-                  isChecked: false,
-                  timing: '13 min'),
-              ToDoItemWidget(
-                  name: "Go to gym",
-                  catName: 'Work',
-                  hour: '12:20 AM',
-                  isChecked: true,
-                  timing: '13 min'),
-              ToDoItemWidget(
-                  name: "Buy Bread",
-                  catName: 'Work',
-                  hour: '12:20 AM',
-                  isChecked: true,
-                  timing: '13 min'),
-              ToDoItemWidget(
-                  name: "Create A Logo",
-                  catName: 'Work',
-                  hour: '12:20 AM',
-                  isChecked: false,
-                  timing: '13 min'),
-              ToDoItemWidget(
-                  name: "Go to gym",
-                  catName: 'Work',
-                  hour: '12:20 AM',
-                  isChecked: true,
-                  timing: '13 min'),
-              ToDoItemWidget(
-                  name: "Buy Bread",
-                  catName: 'Work',
-                  hour: '12:20 AM',
-                  isChecked: true,
-                  timing: '13 min'),
-              ToDoItemWidget(
-                  name: "Create A Logo",
-                  catName: 'Work',
-                  hour: '12:20 AM',
-                  isChecked: false,
-                  timing: '13 min'),
-              ToDoItemWidget(
-                  name: "Go to gym",
-                  catName: 'Work',
-                  hour: '12:20 AM',
-                  isChecked: true,
-                  timing: '13 min'),
-            ],
           ),
         ),
       ],
