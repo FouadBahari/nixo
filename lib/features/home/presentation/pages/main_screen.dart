@@ -173,6 +173,7 @@ class _MainScreentState extends State<MainScreen> {
       screens: _buildScreens(),
       items: _navBarsItems(),
       confineInSafeArea: true,
+
       backgroundColor: AppColors.navbarColor, // Default is Colors.white.
       handleAndroidBackButtonPress: true, // Default is true.
       resizeToAvoidBottomInset:

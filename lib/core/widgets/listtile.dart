@@ -1,7 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:nixo/core/utils/app_colors.dart';
 import 'package:nixo/core/utils/app_dimensions.dart';
@@ -46,6 +43,7 @@ class ToDoItemWidget extends StatelessWidget {
                   decoration: BoxDecoration(
                       color: AppColors.boxColor,
                       borderRadius: BorderRadius.circular(AppSize.radius20)),
+
                   child: ListTile(
                     iconColor: AppColors.success,
                     shape: RoundedRectangleBorder(
@@ -77,6 +75,9 @@ class ToDoItemWidget extends StatelessWidget {
                             color: AppColors.redTitle,
                             fontSize: AppSize.font10),
                       ),
+
+ 
+
                     ),
                   ),
                 ),

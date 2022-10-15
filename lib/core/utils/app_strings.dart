@@ -60,10 +60,17 @@ class AppStrings {
   static const hello = 'Hello!';
   static const overview = 'Overview';
   static const productivity = 'Productivity';
+
   static const eisenhowerMatrix = 'Eisenhower \nMatrix';
   static const habitTracker = 'Habit \nTracker';
   static const urgentmportant = 'Urgent & \nImportant';
   static const noturgentimportant = 'Not Urgent & \nImportant';
   static const urgentunimportant = 'Urgent & \nUnimportant';
   static const noturgentunimportant = 'Not Urgent & \nUnimportant';
+
+  static const priorityTaskProgress = 'Priority task progress';
+  static const completed = 'Completed';
+  static const date = 'Today , 27 september ,Tue';
+  static const seeAll = 'See All';
+
 }

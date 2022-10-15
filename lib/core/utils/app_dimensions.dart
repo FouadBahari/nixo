@@ -41,7 +41,12 @@ class AppSize {
   static double height160 = 160 * factorHeight;
   static double height180 = 180 * factorHeight;
   static double height200 = 200 * factorHeight;
-  static double height280 = 280 * factorHeight;
+
+
+
+  static double height220 = 220 * factorHeight;
+  static double height250 = 250 * factorHeight;
+static double height280 = 280 * factorHeight;
   static double height300 = 300 * factorHeight;
   static double height320 = 320 * factorHeight;
   static double height350 = 350 * factorHeight;
