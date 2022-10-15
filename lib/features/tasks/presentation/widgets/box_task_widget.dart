@@ -37,7 +37,7 @@ class BoxTask extends StatelessWidget {
           Text(title,
               textAlign: TextAlign.center,
               style: getSemiBoldStyle(
-                  color: AppColors.white, fontSize: AppFontSize.font17)),
+                  color: AppColors.white, fontSize: AppSize.font17)),
         ],
       ),
     );

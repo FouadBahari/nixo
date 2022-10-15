@@ -9,6 +9,8 @@ class AppColors {
   static Color success = HexColor.fromHex("#B0D538");
   static Color appBarIConColor = HexColor.fromHex("#DFFFFA");
   static Color drawerColor = HexColor.fromHex("#002D37");
+  static Color redBox = HexColor.fromHex("#DC3553");
+  static Color orangeBox = HexColor.fromHex("#FFA570");
 
   static Color boxColor = HexColor.fromHex("#295070");
   static Color boxColor2 = HexColor.fromHex("#D9D9D9");

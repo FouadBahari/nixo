@@ -42,37 +42,41 @@ class ToDoItemWidget extends StatelessWidget {
           child: Row(
             children: [
               Expanded(
-                child: ListTile(
-                  iconColor: AppColors.success,
-                  shape: RoundedRectangleBorder(
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: AppColors.boxColor,
                       borderRadius: BorderRadius.circular(AppSize.radius20)),
-                  title: Text(name,
-                      style: getSemiBoldStyle(
-                          color: AppColors.white,
-                          fontSize: AppSize.font14)),
-                  tileColor: AppColors.boxColor,
-                  leading: isChecked
-                      ? Icon(
-                          Icons.check_circle_rounded,
-                          color: AppColors.success,
-                        )
-                      : Icon(
-                          Icons.check_circle_outline_rounded,
-                          color: AppColors.success.withOpacity(0.20),
-                        ),
-                  trailing: Container(
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(AppSize.radius10),
-                      color: AppColors.mistakes,
-                    ),
-                    height: AppSize.height22,
-                    width: AppSize.width60,
-                    child: Text(
-                      catName,
-                      style: getSemiBoldStyle(
-                          color: AppColors.redTitle,
-                          fontSize: AppSize.font10),
+                  child: ListTile(
+                    iconColor: AppColors.success,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(AppSize.radius20)),
+                    title: Text(name,
+                        style: getSemiBoldStyle(
+                            color: AppColors.white, fontSize: AppSize.font14)),
+                    tileColor: AppColors.boxColor,
+                    leading: isChecked
+                        ? Icon(
+                            Icons.check_circle_rounded,
+                            color: AppColors.success,
+                          )
+                        : Icon(
+                            Icons.check_circle_outline_rounded,
+                            color: AppColors.success.withOpacity(0.20),
+                          ),
+                    trailing: Container(
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(AppSize.radius10),
+                        color: AppColors.mistakes,
+                      ),
+                      height: AppSize.height22,
+                      width: AppSize.width60,
+                      child: Text(
+                        catName,
+                        style: getSemiBoldStyle(
+                            color: AppColors.redTitle,
+                            fontSize: AppSize.font10),
+                      ),
                     ),
                   ),
                 ),
@@ -84,8 +88,7 @@ class ToDoItemWidget extends StatelessWidget {
                 children: [
                   Text(hour,
                       style: getMediumStyle(
-                          color: AppColors.primary,
-                          fontSize: AppSize.font12)),
+                          color: AppColors.primary, fontSize: AppSize.font12)),
                   SizedBox(
                     height: AppSize.height5,
                   ),

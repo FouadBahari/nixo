@@ -4,6 +4,7 @@ import 'package:nixo/core/utils/app_colors.dart';
 import 'package:nixo/core/utils/app_constants.dart';
 import 'package:nixo/core/utils/app_dimensions.dart';
 import 'package:nixo/core/utils/app_strings.dart';
+import 'package:nixo/core/widgets/app_bar.dart';
 import 'package:nixo/features/Calendar/presentation/pages/calendar_screen.dart';
 import 'package:nixo/features/pomodoro/presentation/pages/pomodoro_screen.dart';
 import 'package:nixo/features/settings/presentation/pages/settings_screen.dart';
@@ -59,38 +60,7 @@ class _MainScreentState extends State<MainScreen> {
   }
 
   _buildAppBar() {
-    return AppBar(
-      leading: IconButton(
-          onPressed: () {
-            _showDrawer();
-          },
-          icon: Icon(
-            Icons.folder_outlined,
-            color: AppColors.appBarIConColor.withOpacity(0.7),
-          )),
-      actions: [
-        Row(
-          children: [
-            IconButton(
-              onPressed: () {},
-              icon: Icon(
-                Icons.search,
-                color: AppColors.appBarIConColor.withOpacity(0.7),
-              ),
-            ),
-            IconButton(
-              onPressed: () {},
-              icon: Icon(
-                Icons.notifications_outlined,
-                color: AppColors.appBarIConColor.withOpacity(0.7),
-              ),
-            )
-          ],
-        )
-      ],
-      backgroundColor: AppColors.system,
-      elevation: 0,
-    );
+    return buildAppBar(_showDrawer, Icons.folder_outlined);
   }
 
   _buildDrawer() {
@@ -223,10 +193,8 @@ class _MainScreentState extends State<MainScreen> {
         curve: Curves.ease,
         duration: Duration(milliseconds: 200),
       ),
-      navBarStyle:
-          NavBarStyle.style1, 
+      navBarStyle: NavBarStyle.style1,
       // Choose the nav bar style with this property.
-
     );
   }
 
