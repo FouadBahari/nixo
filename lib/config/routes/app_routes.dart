@@ -8,6 +8,8 @@ import 'package:nixo/features/home/presentation/pages/main_screen.dart';
 
 import 'package:nixo/features/onboarding/presentation/pages/onboarding.dart';
 import 'package:nixo/features/splash/presentation/pages/splash.dart';
+import 'package:nixo/features/tasks/presentation/pages/eisnhower_matrix.dart';
+import 'package:nixo/features/tasks/presentation/pages/habit_tracker.dart';
 
 import '../../core/utils/app_strings.dart';
 
@@ -18,6 +20,8 @@ class AppRoutes {
   static const String registerRoute = "/register";
   static const String forgotPasswordRoute = "/forgotPassword";
   static const String mainRoute = "/main";
+  static const String eisenhower = "/eisenhower";
+  static const String habitTracker = "/habittracker";
 }
 
 class RouteGenerator {
@@ -37,6 +41,12 @@ class RouteGenerator {
             builder: ((context) => const ForgetPasswordScreen()));
       case AppRoutes.mainRoute:
         return MaterialPageRoute(builder: ((context) => const MainScreen()));
+      case AppRoutes.eisenhower:
+        return MaterialPageRoute(
+            builder: ((context) => const EisnhowerMatrixScreen()));
+      case AppRoutes.habitTracker:
+        return MaterialPageRoute(
+            builder: ((context) => const HabitTrackerScreen()));
 
       default:
         return unDefinedRoute();

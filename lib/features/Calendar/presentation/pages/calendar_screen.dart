@@ -27,7 +27,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
     return Column(
       children: [
         Container(
-          color: AppColors.system,
+          color: AppColors.transparent,
           child: CalendarTimeline(
             initialDate: DateTime.now(),
             firstDate: DateTime.utc(2022),
@@ -123,7 +123,6 @@ class _CalendarScreenState extends State<CalendarScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        backgroundColor: AppColors.system, body: _buildCalanderBody());
+    return Container(color: AppColors.system, child: _buildCalanderBody());
   }
 }
