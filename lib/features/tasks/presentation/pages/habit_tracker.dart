@@ -37,6 +37,9 @@ class _HabitTrackerScreenState extends State<HabitTrackerScreen> {
               color: AppColors.white, fontSize: AppSize.font17),
         ),
       ),
+      SizedBox(
+        height: AppSize.height20,
+      ),
       CalendarTimeline(
         initialDate: DateTime.now(),
         firstDate: DateTime.utc(2022),
@@ -55,17 +58,24 @@ class _HabitTrackerScreenState extends State<HabitTrackerScreen> {
       SizedBox(
         height: AppSize.height20,
       ),
-      ToDoItemWidget(
-          name: 'seif',
-          catName: 'work',
-          hour: '12:15',
-          isChecked: true,
-          timing: '12 min'),
-      CustomAddButton(
-        height: AppSize.height62,
-        width: double.infinity,
-        iconSize: AppSize.height25,
-      )
+      Expanded(
+        child: ListView(
+          padding: EdgeInsets.symmetric(horizontal: AppSize.p24),
+          children: [
+            ToDoItemWidget(
+                name: 'seif',
+                catName: 'work',
+                hour: '12:15',
+                isChecked: true,
+                timing: '12 min'),
+            CustomAddButton(
+              height: AppSize.height62,
+              width: double.infinity,
+              iconSize: AppSize.height25,
+            )
+          ],
+        ),
+      ),
     ]);
   }
 

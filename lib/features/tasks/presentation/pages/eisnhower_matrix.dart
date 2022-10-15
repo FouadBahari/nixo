@@ -27,7 +27,7 @@ class _EisnhowerMatrixScreenState extends State<EisnhowerMatrixScreen> {
             ),
           ),
           SizedBox(
-            height: AppSize.height18,
+            height: AppSize.height20,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

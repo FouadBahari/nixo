@@ -72,5 +72,5 @@ class AppStrings {
   static const completed = 'Completed';
   static const date = 'Today , 27 september ,Tue';
   static const seeAll = 'See All';
-
+  static const goals = 'Goals';
 }
