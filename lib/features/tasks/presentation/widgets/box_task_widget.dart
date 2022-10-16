@@ -20,8 +20,9 @@ class BoxTask extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-          backgroundColor: backboxColor,
-          fixedSize: Size(AppSize.width150, AppSize.height150)),
+        backgroundColor: backboxColor,
+        fixedSize: Size(AppSize.width150, AppSize.height150),
+      ),
       onPressed: onpressed,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,

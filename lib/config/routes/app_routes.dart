@@ -10,6 +10,7 @@ import 'package:nixo/features/onboarding/presentation/pages/onboarding.dart';
 import 'package:nixo/features/splash/presentation/pages/splash.dart';
 import 'package:nixo/features/tasks/presentation/pages/eisnhower_matrix.dart';
 import 'package:nixo/features/tasks/presentation/pages/goals_tracker.dart';
+import 'package:nixo/features/tasks/presentation/pages/groupe_screen.dart';
 import 'package:nixo/features/tasks/presentation/pages/habit_tracker.dart';
 
 import '../../core/utils/app_strings.dart';
@@ -24,6 +25,7 @@ class AppRoutes {
   static const String eisenhower = "/eisenhower";
   static const String habitTracker = "/habittracker";
   static const String goalsTracker = "/goalstracker";
+  static const String groupScreen = "/groupscreen";
 }
 
 class RouteGenerator {
@@ -52,6 +54,8 @@ class RouteGenerator {
       case AppRoutes.goalsTracker:
         return MaterialPageRoute(
             builder: ((context) => const GoalsTrackerScreen()));
+      case AppRoutes.groupScreen:
+        return MaterialPageRoute(builder: ((context) => const GroupScreen()));
 
       default:
         return unDefinedRoute();

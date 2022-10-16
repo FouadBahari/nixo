@@ -7,6 +7,7 @@ import 'package:nixo/core/utils/app_styles.dart';
 import 'package:nixo/core/widgets/app_bar.dart';
 import 'package:nixo/core/widgets/custom_add.dart';
 import 'package:nixo/core/widgets/listtile.dart';
+import 'package:nixo/features/tasks/presentation/widgets/habit_box.dart';
 
 class HabitTrackerScreen extends StatefulWidget {
   const HabitTrackerScreen({super.key});
@@ -62,12 +63,12 @@ class _HabitTrackerScreenState extends State<HabitTrackerScreen> {
         child: ListView(
           padding: EdgeInsets.symmetric(horizontal: AppSize.p24),
           children: [
-            ToDoItemWidget(
-                name: 'seif',
-                catName: 'work',
-                hour: '12:15',
-                isChecked: true,
-                timing: '12 min'),
+            HabitTrackerBox(
+                hour: '23:13 AM',
+                timing: '23 MIN',
+                name: 'Reading a book',
+                streak: '2-days streak',
+                isChecked: true),
             CustomAddButton(
               height: AppSize.height62,
               width: double.infinity,

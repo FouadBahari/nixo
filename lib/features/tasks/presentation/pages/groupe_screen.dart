@@ -1,21 +1,22 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/src/widgets/container.dart';
+import 'package:flutter/src/widgets/framework.dart';
 import 'package:nixo/core/utils/app_colors.dart';
-import 'package:nixo/core/utils/app_dimensions.dart';
 import 'package:nixo/core/utils/app_strings.dart';
+import 'package:nixo/core/utils/app_dimensions.dart';
 import 'package:nixo/core/utils/app_styles.dart';
 import 'package:nixo/core/widgets/app_bar.dart';
-import 'package:nixo/features/tasks/presentation/widgets/box_goals_widget.dart';
+import 'package:nixo/core/widgets/listtile.dart';
 
-class GoalsTrackerScreen extends StatefulWidget {
-  const GoalsTrackerScreen({super.key});
+class GroupScreen extends StatefulWidget {
+  const GroupScreen({super.key});
 
   @override
-  State<GoalsTrackerScreen> createState() => _GoalsTrackerScreenState();
+  State<GroupScreen> createState() => _GroupScreenState();
 }
 
-class _GoalsTrackerScreenState extends State<GoalsTrackerScreen> {
-  Widget _buildGoalsBody() {
+class _GroupScreenState extends State<GroupScreen> {
+  Widget _buildGroupBody() {
     return Container(
       padding: EdgeInsets.symmetric(
         horizontal: AppSize.p24,
@@ -25,7 +26,7 @@ class _GoalsTrackerScreenState extends State<GoalsTrackerScreen> {
           Center(
             child: Text(
               textAlign: TextAlign.center,
-              AppStrings.goals,
+              'Work',
               style: getSemiBoldStyle(
                   color: AppColors.white, fontSize: AppSize.font17),
             ),
@@ -36,14 +37,15 @@ class _GoalsTrackerScreenState extends State<GoalsTrackerScreen> {
           Expanded(
             child: ListView(
               children: [
-                GoalsBox(
-                  subTitle: '2-days streak',
-                  title: 'App design',
-                  boxColor: AppColors.secondary.withOpacity(0.5),
-                )
+                ToDoItemWidget(
+                    name: 'Design',
+                    catName: 'life',
+                    hour: '22:20 AM',
+                    isChecked: true,
+                    timing: '20min')
               ],
             ),
-          ),
+          )
         ],
       ),
     );
@@ -56,6 +58,6 @@ class _GoalsTrackerScreenState extends State<GoalsTrackerScreen> {
         appBar: buildAppBar(() {
           Navigator.pop(context);
         }, Icons.arrow_back_outlined),
-        body: Container(child: _buildGoalsBody()));
+        body: Container(child: _buildGroupBody()));
   }
 }

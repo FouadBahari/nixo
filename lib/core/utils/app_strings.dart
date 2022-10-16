@@ -21,6 +21,7 @@ class AppStrings {
   static const alreadyHaveAccount = 'I already have an account';
   static const alreadyHaveAcc = 'already have an account? ';
   static const login = 'Log in';
+  static const signout = 'Sign Out';
   static const name = 'Name';
   static const email = 'Email Address';
   static const password = 'Password';
@@ -73,4 +74,5 @@ class AppStrings {
   static const date = 'Today , 27 september ,Tue';
   static const seeAll = 'See All';
   static const goals = 'Goals';
+  static const start = 'Start';
 }

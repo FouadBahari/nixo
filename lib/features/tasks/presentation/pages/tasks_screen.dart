@@ -48,6 +48,14 @@ class _TasksScreenState extends State<TasksScreen> {
                   .pushNamed(AppRoutes.goalsTracker);
             },
           ),
+          BoxTask(
+            icon: Icons.badge,
+            title: 'Work',
+            onpressed: () {
+              Navigator.of(context, rootNavigator: true)
+                  .pushNamed(AppRoutes.groupScreen);
+            },
+          ),
           CustomAddButton(
             height: AppSize.height150,
             width: AppSize.width150,
