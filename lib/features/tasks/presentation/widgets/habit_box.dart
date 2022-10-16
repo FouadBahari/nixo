@@ -1,28 +1,29 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/src/widgets/container.dart';
+import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:nixo/core/utils/app_colors.dart';
 import 'package:nixo/core/utils/app_dimensions.dart';
 import 'package:nixo/core/utils/app_styles.dart';
 
-class ToDoItemWidget extends StatelessWidget {
-  String name;
-  String catName;
-  String hour;
-  String timing;
-  bool isChecked;
-
-  ToDoItemWidget(
+class HabitTrackerBox extends StatelessWidget {
+  HabitTrackerBox(
       {super.key,
       required this.name,
-      required this.catName,
-      required this.hour,
+      required this.streak,
       required this.isChecked,
+      required this.hour,
       required this.timing});
+  String name;
+  String hour;
+  String timing;
+  String streak;
+  bool isChecked;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: AppSize.height62,
+      height: AppSize.height80,
       margin: EdgeInsets.only(bottom: AppSize.m12),
       child: ClipRRect(
         clipBehavior: Clip.hardEdge,
@@ -40,15 +41,26 @@ class ToDoItemWidget extends StatelessWidget {
               Expanded(
                 child: Container(
                   decoration: BoxDecoration(
-                      color: AppColors.boxColor,
-                      borderRadius: BorderRadius.circular(AppSize.radius20)),
+                    color: AppColors.boxColor,
+                    borderRadius: BorderRadius.circular(AppSize.radius20),
+                  ),
                   child: ListTile(
                     iconColor: AppColors.success,
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(AppSize.radius20)),
-                    title: Text(name,
-                        style: getSemiBoldStyle(
-                            color: AppColors.white, fontSize: AppSize.font14)),
+                      borderRadius: BorderRadius.circular(AppSize.radius20),
+                    ),
+                    title: Text(
+                      name,
+                      style: getSemiBoldStyle(
+                          color: AppColors.white, fontSize: AppSize.font14),
+                    ),
+                    subtitle: Text(
+                      streak,
+                      style: getLightStyle(
+                        color: AppColors.white,
+                        fontSize: AppSize.font10,
+                      ),
+                    ),
                     tileColor: AppColors.boxColor,
                     leading: isChecked
                         ? Icon(
@@ -63,28 +75,8 @@ class ToDoItemWidget extends StatelessWidget {
                       width: AppSize.width100,
                       child: Row(
                         children: [
-                          Container(
-                            alignment: Alignment.center,
-                            decoration: BoxDecoration(
-                              borderRadius:
-                                  BorderRadius.circular(AppSize.radius10),
-                              color: AppColors.mistakes,
-                            ),
-                            height: AppSize.height22,
-                            width: AppSize.width60,
-                            child: Text(
-                              catName,
-                              style: getSemiBoldStyle(
-                                  color: AppColors.redTitle,
-                                  fontSize: AppSize.font10),
-                            ),
-                          ),
                           SizedBox(
                             width: AppSize.width5,
-                          ),
-                          Icon(
-                            Icons.flag,
-                            color: AppColors.success,
                           ),
                         ],
                       ),
