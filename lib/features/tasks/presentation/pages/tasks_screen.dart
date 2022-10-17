@@ -43,7 +43,18 @@ class _TasksScreenState extends State<TasksScreen> {
           BoxTask(
             icon: Icons.transgender_outlined,
             title: 'Goals',
-            onpressed: () {},
+            onpressed: () {
+              Navigator.of(context, rootNavigator: true)
+                  .pushNamed(AppRoutes.goalsTracker);
+            },
+          ),
+          BoxTask(
+            icon: Icons.badge,
+            title: 'Work',
+            onpressed: () {
+              Navigator.of(context, rootNavigator: true)
+                  .pushNamed(AppRoutes.groupScreen);
+            },
           ),
           CustomAddButton(
             height: AppSize.height150,

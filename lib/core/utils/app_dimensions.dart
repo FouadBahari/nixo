@@ -23,6 +23,8 @@ class AppSize {
   static double height18 = 18 * factorHeight;
   static double height20 = 20 * factorHeight;
   static double height22 = 22 * factorHeight;
+  static double height23 = 23 * factorHeight;
+  static double height24 = 24 * factorHeight;
   static double height25 = 25 * factorHeight;
   static double height30 = 30 * factorHeight;
   static double height35 = 35 * factorHeight;
@@ -33,8 +35,10 @@ class AppSize {
   static double height60 = 60 * factorHeight;
   static double height61 = 61 * factorHeight;
   static double height62 = 62 * factorHeight;
+  static double height66 = 66 * factorHeight;
   static double height80 = 80 * factorHeight;
   static double height100 = 100 * factorHeight;
+  static double height110 = 110 * factorHeight;
   static double height120 = 120 * factorHeight;
   static double height140 = 140 * factorHeight;
   static double height150 = 150 * factorHeight;
@@ -42,11 +46,9 @@ class AppSize {
   static double height180 = 180 * factorHeight;
   static double height200 = 200 * factorHeight;
 
-
-
   static double height220 = 220 * factorHeight;
   static double height250 = 250 * factorHeight;
-static double height280 = 280 * factorHeight;
+  static double height280 = 280 * factorHeight;
   static double height300 = 300 * factorHeight;
   static double height320 = 320 * factorHeight;
   static double height350 = 350 * factorHeight;
@@ -71,11 +73,17 @@ static double height280 = 280 * factorHeight;
   static double width45 = 45 * factorwidth;
   static double width50 = 50 * factorwidth;
   static double width60 = 60 * factorwidth;
+  static double width70 = 70 * factorwidth;
+  static double width80 = 80 * factorwidth;
+  static double width90 = 90 * factorwidth;
+  static double width95 = 95 * factorwidth;
   static double width100 = 100 * factorwidth;
   static double width120 = 120 * factorwidth;
   static double width150 = 150 * factorwidth;
   static double width160 = 160 * factorwidth;
   static double width170 = 170 * factorwidth;
+  static double width180 = 180 * factorwidth;
+  static double width200 = 200 * factorwidth;
   static double width300 = 300 * factorwidth;
 
   //
