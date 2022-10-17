@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:nixo/core/utils/app_colors.dart';
 import 'package:nixo/core/utils/app_dimensions.dart';
+import 'package:nixo/core/utils/app_strings.dart';
 
 import 'app_fonts.dart';
 
@@ -63,7 +64,7 @@ class AppConstants {
             height: 10,
           ),
           Text(
-            data ?? "Setting up your account please wait..",
+            data ?? AppStrings.settingUp,
             style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
           )
         ],
@@ -85,7 +86,7 @@ class AppConstants {
     );
   }
 
-  static void snackBar(
+  static void snackBarWithProgress(
       {required String msg, required GlobalKey<ScaffoldState> scaffoldState}) {
     ScaffoldMessenger.of(scaffoldState.currentContext!).showSnackBar(SnackBar(
       content: Row(
@@ -99,29 +100,5 @@ class AppConstants {
         ],
       ),
     ));
-  }
-
-  void push({required BuildContext context, required Widget widget}) {
-    Navigator.push(context, MaterialPageRoute(builder: (_) => widget));
-  }
-
-  void toast(String message) {
-    Fluttertoast.showToast(
-        msg: message,
-        toastLength: Toast.LENGTH_SHORT,
-        gravity: ToastGravity.BOTTOM,
-        timeInSecForIosWeb: 1,
-        backgroundColor: Colors.red,
-        textColor: Colors.white,
-        fontSize: 16.0);
-  }
-
-  Widget verticalDivider() {
-    return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 4),
-      height: 18,
-      width: 1.0,
-      decoration: BoxDecoration(color: Colors.black.withOpacity(.4)),
-    );
   }
 }
