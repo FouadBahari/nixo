@@ -37,7 +37,7 @@ class _MainScreentState extends State<MainScreen> {
     return AdvancedDrawer(
       drawer: _buildDrawer(),
       controller: _advancedDrawerController,
-      backdropColor: AppColors.drawerColor,
+      backdropColor: AppColors.navbarColor,
       animationCurve: Curves.easeInOut,
       animationDuration:
           const Duration(milliseconds: AppConstants.sliderAnimationTime),

@@ -29,10 +29,10 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
     return PageDecoration(
         imagePadding: EdgeInsets.only(top: AppSize.height60),
         pageColor: Colors.transparent,
-        bodyTextStyle: getRegularStyle(
-            color: AppColors.white, fontSize: AppSize.font16),
-        titleTextStyle: getSemiBoldStyle(
-            color: AppColors.white, fontSize: AppSize.font25),
+        bodyTextStyle:
+            getRegularStyle(color: AppColors.white, fontSize: AppSize.font16),
+        titleTextStyle:
+            getSemiBoldStyle(color: AppColors.white, fontSize: AppSize.font25),
         titlePadding: EdgeInsets.only(top: AppSize.height100),
         bodyPadding: EdgeInsets.only(top: AppSize.height40));
   }
@@ -83,7 +83,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 _currentPage = value;
               });
             }),
-            onDone: () {},
+            onDone: () {}, 
             skip: Text(
               AppStrings.skip,
               style: getBoldStyle(color: AppColors.primary),
@@ -104,7 +104,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   child: PrimaryButtom(
                     onPressed: () {
                       Navigator.pushReplacementNamed(
-                          context, AppRoutes.mainRoute);
+                          context, AppRoutes.registerRoute);
                     },
                     title: AppStrings.newHere,
                   ),

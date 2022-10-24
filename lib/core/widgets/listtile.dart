@@ -59,19 +59,34 @@ class ToDoItemWidget extends StatelessWidget {
                             Icons.check_circle_outline_rounded,
                             color: AppColors.success.withOpacity(0.20),
                           ),
-                    trailing: Container(
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(AppSize.radius10),
-                        color: AppColors.mistakes,
-                      ),
-                      height: AppSize.height22,
-                      width: AppSize.width60,
-                      child: Text(
-                        catName,
-                        style: getSemiBoldStyle(
-                            color: AppColors.redTitle,
-                            fontSize: AppSize.font10),
+                    trailing: SizedBox(
+                      width: AppSize.width100,
+                      child: Row(
+                        children: [
+                          Container(
+                            alignment: Alignment.center,
+                            decoration: BoxDecoration(
+                              borderRadius:
+                                  BorderRadius.circular(AppSize.radius10),
+                              color: AppColors.mistakes,
+                            ),
+                            height: AppSize.height22,
+                            width: AppSize.width60,
+                            child: Text(
+                              catName,
+                              style: getSemiBoldStyle(
+                                  color: AppColors.redTitle,
+                                  fontSize: AppSize.font10),
+                            ),
+                          ),
+                          SizedBox(
+                            width: AppSize.width5,
+                          ),
+                          Icon(
+                            Icons.flag,
+                            color: AppColors.success,
+                          ),
+                        ],
                       ),
                     ),
                   ),
@@ -95,9 +110,9 @@ class ToDoItemWidget extends StatelessWidget {
                       color: AppColors.primary,
                       fontSize: AppSize.font12,
                     ),
-                  )
+                  ),
                 ],
-              )
+              ),
             ],
           ),
         ),

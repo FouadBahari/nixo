@@ -1,8 +1,12 @@
+import 'dart:io';
+
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:nixo/core/utils/app_colors.dart';
 import 'package:nixo/core/utils/app_dimensions.dart';
 import 'package:nixo/core/utils/app_strings.dart';
+import 'package:nixo/core/utils/app_styles.dart';
 
 import 'app_fonts.dart';
 
@@ -57,15 +61,16 @@ class AppConstants {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          const CircularProgressIndicator(
-            backgroundColor: Colors.orange,
+          CircularProgressIndicator(
+            backgroundColor: AppColors.primary,
           ),
-          const SizedBox(
-            height: 10,
+          SizedBox(
+            height: AppSize.height10,
           ),
           Text(
             data ?? AppStrings.settingUp,
-            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+            style: getMediumStyle(
+                fontSize: AppSize.font16, color: AppColors.white),
           )
         ],
       ),
@@ -101,4 +106,23 @@ class AppConstants {
       ),
     ));
   }
+
+  Future<File?> pickOneImage() async {
+    final result = await FilePicker.platform
+        .pickFiles(type: FileType.image, allowMultiple: false);
+    if (result != null) {
+      return File(result.files.first.path!);
+    }
+    return null;
+  }
+
+  static bool isEmailValid(String email) {
+    Pattern pattern =
+        r'^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$';
+    RegExp regex = RegExp(pattern.toString());
+    return regex.hasMatch(email);
+  }
+
+  static bool isPasswordValid(String password) => password.length > 6;
+  static bool isUserNameValid(String username) => username.length > 6;
 }

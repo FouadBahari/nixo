@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:nixo/core/utils/app_colors.dart';
-import '../../config/locale/app_localizations.dart';
+import 'package:nixo/core/utils/app_dimensions.dart';
+import 'package:nixo/core/utils/app_strings.dart';
 import 'package:nixo/core/utils/mediaquery_values.dart';
 
-class ErrorWidget extends StatelessWidget {
+class ErrorScreen extends StatelessWidget {
   final VoidCallback? onPress;
-  const ErrorWidget({Key? key, this.onPress}) : super(key: key);
+  const ErrorScreen({Key? key, this.onPress}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,38 +18,42 @@ class ErrorWidget extends StatelessWidget {
           child: Icon(
             Icons.warning_amber_rounded,
             color: AppColors.primary,
-            size: 150,
+            size: AppSize.height150,
           ),
         ),
         Container(
-          margin: const EdgeInsets.symmetric(vertical: 12),
+          margin: EdgeInsets.symmetric(vertical: AppSize.m12),
           child: Text(
-            AppLocalizations.of(context)!.translate('something_went_wrong')!,
-            style: const TextStyle(
-                color: Colors.black, fontSize: 20, fontWeight: FontWeight.w700),
+            AppStrings.somethingWentWrong,
+            style: TextStyle(
+                color: AppColors.white,
+                fontSize: AppSize.font20,
+                fontWeight: FontWeight.w700),
           ),
         ),
         Text(
-          AppLocalizations.of(context)!.translate('try_again')!,
+          AppStrings.pleaseTryAgain,
           style: TextStyle(
-              color: AppColors.hint, fontSize: 18, fontWeight: FontWeight.w500),
+              color: AppColors.hint,
+              fontSize: AppSize.font18,
+              fontWeight: FontWeight.w500),
         ),
         Container(
-          height: 55,
-          width: context.width * 0.55,
-          margin: const EdgeInsets.symmetric(vertical: 15),
+          height: AppSize.height55,
+          width: MediaQuery.of(context).size.width * 0.55,
+          margin: EdgeInsets.symmetric(vertical: AppSize.m16),
           child: ElevatedButton(
             style: ElevatedButton.styleFrom(
-                primary: AppColors.primary,
-                onPrimary: Theme.of(context).primaryColor,
-                elevation: 500,
+                backgroundColor: AppColors.primary,
+                foregroundColor: AppColors.white,
+                elevation: AppSize.height500,
                 shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(50))),
+                    borderRadius: BorderRadius.circular(AppSize.radius50))),
             child: Text(
-              AppLocalizations.of(context)!.translate('reload_screen')!,
-              style: const TextStyle(
+              AppStrings.reloadScreen,
+              style: TextStyle(
                   color: Colors.white,
-                  fontSize: 20,
+                  fontSize: AppSize.font20,
                   fontWeight: FontWeight.w700),
             ),
             onPressed: () {
