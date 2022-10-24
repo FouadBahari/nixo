@@ -22,7 +22,7 @@ class AppStrings {
   static const alreadyHaveAcc = 'already have an account? ';
   static const login = 'Log in';
   static const signout = 'Sign Out';
-  static const name = 'Name';
+  static const username = 'Usename';
   static const email = 'Email Address';
   static const password = 'Password';
   static const conttinue = 'Continue';
@@ -73,6 +73,14 @@ class AppStrings {
   static const completed = 'Completed';
   static const date = 'Today , 27 september ,Tue';
   static const seeAll = 'See All';
+  static const settingUp = 'Setting up your account please wait..';
   static const goals = 'Goals';
   static const start = 'Start';
+  static const validEmail = 'Enter a valid email';
+  static const validPassword = 'Enter a valid password';
+  static const validuserName = 'Enter a valid username';
+  static const somethingWentWrong = 'Something went wrong';
+  static const pleaseTryAgain = 'Please try again';
+  static const reloadScreen = 'Reload';
+  static const wrongInfos = 'Wrong infos, please check!';
 }

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:nixo/config/routes/app_routes.dart';
 import 'package:nixo/core/utils/app_assets.dart';
 import 'package:nixo/core/utils/app_colors.dart';
+import 'package:nixo/core/utils/app_constants.dart';
 import 'package:nixo/core/utils/app_dimensions.dart';
 import 'package:nixo/core/utils/app_strings.dart';
 import 'package:nixo/core/utils/app_styles.dart';
@@ -17,6 +18,27 @@ class ForgetPasswordScreen extends StatefulWidget {
 }
 
 class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
+  final TextEditingController _emailController = TextEditingController();
+  final GlobalKey<ScaffoldState> _scaffoldState = GlobalKey<ScaffoldState>();
+  final formGlobalKey = GlobalKey<FormState>();
+
+  @override
+  void dispose() {
+    _emailController.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      key: _scaffoldState,
+      resizeToAvoidBottomInset: false,
+      backgroundColor: AppColors.system,
+      body: _buildingForgetPasswordBody(),
+    );
+  }
+
+  
   Widget _buildingForgetPasswordBody() {
     return Container(
       decoration: const BoxDecoration(
@@ -75,7 +97,25 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
             SizedBox(
               height: AppSize.height100,
             ),
-            CustomTextField(title: AppStrings.email),
+            Form(
+              key: formGlobalKey,
+              child: Column(
+                children: [
+                  SizedBox(height: AppSize.height15),
+                  CustomTextField(
+                    validator: (email) {
+                      if (!AppConstants.isEmailValid(email!)) {
+                        return AppStrings.validEmail;
+                      }
+                      return null;
+                    },
+                    textController: _emailController,
+                    title: AppStrings.email,
+                  ),
+                  SizedBox(height: AppSize.height15),
+                ],
+              ),
+            ),           
             SizedBox(
               height: AppSize.height50,
             ),
@@ -117,12 +157,4 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
     );
   }
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      resizeToAvoidBottomInset: false,
-      backgroundColor: AppColors.system,
-      body: _buildingForgetPasswordBody(),
-    );
-  }
 }

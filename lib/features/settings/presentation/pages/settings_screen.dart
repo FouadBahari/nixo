@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:nixo/core/utils/app_colors.dart';
 import 'package:nixo/core/utils/app_dimensions.dart';
 import 'package:nixo/core/utils/app_strings.dart';
 import 'package:nixo/core/utils/app_styles.dart';
-import 'package:nixo/features/settings/widgets/settings_box.dart';
+import 'package:nixo/features/auth/presentation/cubit/auth_cubit.dart';
+import 'package:nixo/features/settings/presentation/widgets/settings_box.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});
@@ -83,7 +85,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
             style: ElevatedButton.styleFrom(
               backgroundColor: AppColors.redBox.withOpacity(0.3),
             ),
-            onPressed: () {},
+            onPressed: () {
+              BlocProvider.of<AuthCubit>(context).loggedOut();
+            },
             child: Text(
               AppStrings.signout,
               style: getSemiBoldStyle(

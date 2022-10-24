@@ -62,15 +62,20 @@ class HabitTrackerBox extends StatelessWidget {
                       ),
                     ),
                     tileColor: AppColors.boxColor,
-                    leading: isChecked
-                        ? Icon(
-                            Icons.check_circle_rounded,
-                            color: AppColors.success,
-                          )
-                        : Icon(
-                            Icons.check_circle_outline_rounded,
-                            color: AppColors.success.withOpacity(0.20),
-                          ),
+                    leading: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        isChecked
+                            ? Icon(
+                                Icons.check_circle_rounded,
+                                color: AppColors.success,
+                              )
+                            : Icon(
+                                Icons.check_circle_outline_rounded,
+                                color: AppColors.success.withOpacity(0.20),
+                              ),
+                      ],
+                    ),
                     trailing: SizedBox(
                       width: AppSize.width100,
                       child: Row(

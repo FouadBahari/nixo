@@ -16,6 +16,7 @@ import 'package:nixo/features/tasks/presentation/pages/habit_tracker.dart';
 import '../../core/utils/app_strings.dart';
 
 class AppRoutes {
+
   static const String initialRoute = "/";
   static const String onBoardingRoute = "/onBoarding";
   static const String loginRoute = "/login";

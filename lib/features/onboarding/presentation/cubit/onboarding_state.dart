@@ -7,4 +7,7 @@ abstract class OnboardingState extends Equatable {
   List<Object> get props => [];
 }
 
-class OnboardingInitial extends OnboardingState {}
+class OnboardingInitialState extends OnboardingState {}
+class OnboardingFirstTimeState extends OnboardingState {}
+class OnboardingNotFirstTimeState extends OnboardingState {}
+class OnboardingFailureState extends OnboardingState {}
