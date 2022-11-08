@@ -58,6 +58,7 @@ class AppSize {
   //
 
   static double width1 = 1 * factorwidth;
+  static double width1_5 = 1.5 * factorwidth;
   static double width2 = 2 * factorwidth;
   static double width3 = 3 * factorwidth;
   static double width5 = 5 * factorwidth;
@@ -94,7 +95,8 @@ class AppSize {
   static double radius25 = 25 * factorHeight;
   static double radius30 = 30 * factorHeight;
   static double radius35 = 35 * factorHeight;
-  static double radius50= 50 * factorHeight;
+  static double radius50 = 50 * factorHeight;
+  static double radius100 = 100 * factorHeight;
 
   //font
   static double font8 = 8 * factorHeight;
@@ -130,6 +132,7 @@ class AppSize {
   //padding
 
   static double p8 = 8.0 * factorHeight;
+  static double p10 = 10.0 * factorHeight;
   static double p12 = 12.0 * factorHeight;
   static double p14 = 14.0 * factorHeight;
   static double p16 = 16.0 * factorHeight;

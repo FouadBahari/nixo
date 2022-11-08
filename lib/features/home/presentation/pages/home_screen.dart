@@ -29,7 +29,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Row(
       children: [
         _isClicked
-            ? PrimaryButtom(onPressed: () {}, title: AppStrings.overview)
+            ? PrimaryButton(onPressed: () {}, title: AppStrings.overview)
             : TextButton(
                 onPressed: () => _click(true),
                 child: Text(
@@ -38,7 +38,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 )),
         SizedBox(width: AppSize.width30),
         !_isClicked
-            ? PrimaryButtom(onPressed: () {}, title: AppStrings.productivity)
+            ? PrimaryButton(onPressed: () {}, title: AppStrings.productivity)
             : TextButton(
                 onPressed: () => _click(false),
                 child: Text(

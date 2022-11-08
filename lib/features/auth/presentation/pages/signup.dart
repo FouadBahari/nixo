@@ -192,7 +192,7 @@ class _SignupScreenState extends State<SignupScreen> {
               SizedBox(
                 height: AppSize.height50,
                 width: double.infinity,
-                child: PrimaryButtom(
+                child: PrimaryButton(
                     onPressed: () {
                       _submitSignUp();
                     },

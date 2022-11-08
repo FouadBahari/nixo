@@ -101,7 +101,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 child: SizedBox(
                   height: AppSize.height50,
                   width: double.infinity,
-                  child: PrimaryButtom(
+                  child: PrimaryButton(
                     onPressed: () {
                       Navigator.pushReplacementNamed(
                           context, AppRoutes.registerRoute);

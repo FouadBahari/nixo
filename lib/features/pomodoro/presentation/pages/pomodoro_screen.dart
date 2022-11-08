@@ -75,7 +75,7 @@ class _PomodoroScreenState extends State<PomodoroScreen> {
           SizedBox(
               height: AppSize.height60,
               width: AppSize.width100,
-              child: PrimaryButtom(onPressed: () {}, title: AppStrings.start)),
+              child: PrimaryButton(onPressed: () {}, title: AppStrings.start)),
           SizedBox(
             height: AppSize.height40,
           ),

@@ -15,6 +15,7 @@ class AppStrings {
       'Bring structure to your workflow by using time blocking pomodoro technique.';
   static const done = 'Done';
   static const skip = 'Skip';
+  static const save = 'Save';
   static const back = 'back';
   static const signup = 'Sign up';
   static const newHere = 'I`m new here!';
@@ -53,6 +54,10 @@ class AppStrings {
   static const notUrgentAndImportant = 'NU & I';
   static const urgentAndNotImportant = 'U & NI';
   static const notUrgentAndNotImportant = 'NU & NI';
+  static const urgentAndImportantAll = 'Urgent & important';
+  static const notUrgentAndImportantAll = 'Not urgent & important';
+  static const urgentAndNotImportantAll = 'Urgent & unimportant';
+  static const notUrgentAndNotImportantAll = 'Not urgent & unimportant';
   static const settings = 'Settings';
   static const home = 'Home';
   static const calendar = 'Calendar';
@@ -83,4 +88,16 @@ class AppStrings {
   static const pleaseTryAgain = 'Please try again';
   static const reloadScreen = 'Reload';
   static const wrongInfos = 'Wrong infos, please check!';
+  static const whatWouldYouLokeToDo = 'What Would you like to do?';
+  static const note = 'Note';
+  static const addTask = 'Task';
+  static const adddGroup = 'Group';
+  static const addGoal = 'Goal';
+  static const setTime = 'Set Time';
+  static const setDuration = 'Set Duration';
+  static const setReminder = 'Reminder';
+  static const setRepeat = 'Repeat';
+  static const ok = 'Ok';
+  static const forgotPasswordSent =
+      'Verify your email address to reset your password';
 }

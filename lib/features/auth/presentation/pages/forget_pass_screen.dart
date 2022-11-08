@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:nixo/config/routes/app_routes.dart';
 import 'package:nixo/core/utils/app_assets.dart';
 import 'package:nixo/core/utils/app_colors.dart';
@@ -9,6 +10,8 @@ import 'package:nixo/core/utils/app_strings.dart';
 import 'package:nixo/core/utils/app_styles.dart';
 import 'package:nixo/core/widgets/primary_btn.dart';
 import 'package:nixo/core/widgets/text_field.dart';
+import 'package:nixo/features/auth/presentation/cubit/credenial_state.dart';
+import 'package:nixo/features/auth/presentation/cubit/credential_cubit.dart';
 
 class ForgetPasswordScreen extends StatefulWidget {
   const ForgetPasswordScreen({super.key});
@@ -34,11 +37,24 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
       key: _scaffoldState,
       resizeToAvoidBottomInset: false,
       backgroundColor: AppColors.system,
-      body: _buildingForgetPasswordBody(),
+      body: BlocConsumer<CredentialCubit, CredentialState>(
+        listener: (context, state) {
+          if (state is ForgotPasswordSent) {
+            AppConstants.snackBarNetwork(
+                msg: AppStrings.forgotPasswordSent,
+                scaffoldState: _scaffoldState);
+          } else if (state is CredentialFailure) {
+            AppConstants.snackBarNetwork(
+                msg: AppStrings.wrongInfos, scaffoldState: _scaffoldState);
+          }
+        },
+        builder: ((context, state) {
+          return _buildingForgetPasswordBody();
+        }),
+      ),
     );
   }
 
-  
   Widget _buildingForgetPasswordBody() {
     return Container(
       decoration: const BoxDecoration(
@@ -115,14 +131,18 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
                   SizedBox(height: AppSize.height15),
                 ],
               ),
-            ),           
+            ),
             SizedBox(
               height: AppSize.height50,
             ),
             SizedBox(
               height: AppSize.height50,
               width: double.infinity,
-              child: PrimaryButtom(onPressed: () {}, title: AppStrings.reset),
+              child: PrimaryButton(
+                  onPressed: () {
+                    _submitForgotPassword();
+                  },
+                  title: AppStrings.reset),
             ),
             SizedBox(
               height: AppSize.height20,
@@ -157,4 +177,12 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
     );
   }
 
+  _submitForgotPassword() {
+    if (!formGlobalKey.currentState!.validate()) {
+      return;
+    }
+    BlocProvider.of<CredentialCubit>(context).forgotPassword(
+      email: _emailController.text,
+    );
+  }
 }

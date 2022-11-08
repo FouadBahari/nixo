@@ -3,10 +3,10 @@ import 'package:nixo/core/utils/app_colors.dart';
 import 'package:nixo/core/utils/app_dimensions.dart';
 import 'package:nixo/core/utils/app_styles.dart';
 
-class PrimaryButtom extends StatelessWidget {
+class PrimaryButton extends StatelessWidget {
   String title;
   VoidCallback onPressed;
-  PrimaryButtom({super.key, required this.onPressed, required this.title});
+  PrimaryButton({super.key, required this.onPressed, required this.title});
 
   @override
   Widget build(BuildContext context) {

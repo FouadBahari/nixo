@@ -171,7 +171,7 @@ class _SignInScreenState extends State<SignInScreen> {
             SizedBox(
               height: AppSize.height50,
               width: double.infinity,
-              child: PrimaryButtom(
+              child: PrimaryButton(
                   onPressed: () {
                     _submitLogin();
                   },
