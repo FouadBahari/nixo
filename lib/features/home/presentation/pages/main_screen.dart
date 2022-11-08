@@ -478,87 +478,85 @@ class _MainScreentState extends State<MainScreen> {
         return SingleChildScrollView(
           padding:
               EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
-          child: Expanded(
-            child: Container(
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(AppSize.radius20),
-                  color: AppColors.navbarColor),
-              width: double.infinity,
-              padding: EdgeInsets.only(
-                left: AppSize.height20,
-                right: AppSize.height20,
-                bottom: AppSize.height20,
-              ),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Padding(
-                    padding: EdgeInsets.symmetric(horizontal: AppSize.width120),
-                    child: Divider(
-                        thickness: AppSize.height2,
-                        color: AppColors.appBarIConColor),
-                  ),
-                  SizedBox(
-                    height: AppSize.height20,
-                  ),
-                  AddTaskTextField(
-                      title: AppStrings.whatWouldYouLokeToDo,
-                      maxLines: 1,
-                      textInputType: TextInputType.text,
-                      minLines: 1,
-                      textController: _addTaskController),
-                  SizedBox(
-                    height: AppSize.height20,
-                  ),
-                  AddTaskTextField(
-                      title: AppStrings.note,
-                      maxLines: null,
-                      textInputType: TextInputType.multiline,
-                      minLines: 4,
-                      textController: _addDescriptionController),
-                  SizedBox(
-                    height: AppSize.height20,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          ElevatedButton(
-                            onPressed: () {
-                              _buildClendarPicker();
-                            },
-                            style: ElevatedButton.styleFrom(
-                                backgroundColor: AppColors.transparent,
-                                shape: const CircleBorder(),
-                                padding: EdgeInsets.all(AppSize.height8)),
-                            child: Icon(Icons.calendar_month_outlined,
-                                color: AppColors.appBarIConColor),
-                          ),
-                          PopupMenuButton(
-                            color: AppColors.navbarColor,
-                            itemBuilder: (context) {
-                              return _flagsmenuList;
-                            },
-                            icon: Icon(Icons.flag_sharp,
-                                color: AppColors.appBarIConColor),
-                          ),
-                          PopupMenuButton(
-                            color: AppColors.navbarColor,
-                            itemBuilder: (context) {
-                              return _groupMenuList;
-                            },
-                            icon: Icon(Icons.local_offer_outlined,
-                                color: AppColors.appBarIConColor),
-                          ),
-                        ],
-                      ),
-                      PrimaryButton(onPressed: () {}, title: AppStrings.save)
-                    ],
-                  )
-                ],
-              ),
+          child: Container(
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(AppSize.radius20),
+                color: AppColors.navbarColor),
+            width: double.infinity,
+            padding: EdgeInsets.only(
+              left: AppSize.height20,
+              right: AppSize.height20,
+              bottom: AppSize.height20,
+            ),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: AppSize.width120),
+                  child: Divider(
+                      thickness: AppSize.height2,
+                      color: AppColors.appBarIConColor),
+                ),
+                SizedBox(
+                  height: AppSize.height20,
+                ),
+                AddTaskTextField(
+                    title: AppStrings.whatWouldYouLokeToDo,
+                    maxLines: 1,
+                    textInputType: TextInputType.text,
+                    minLines: 1,
+                    textController: _addTaskController),
+                SizedBox(
+                  height: AppSize.height20,
+                ),
+                AddTaskTextField(
+                    title: AppStrings.note,
+                    maxLines: null,
+                    textInputType: TextInputType.multiline,
+                    minLines: 4,
+                    textController: _addDescriptionController),
+                SizedBox(
+                  height: AppSize.height20,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        ElevatedButton(
+                          onPressed: () {
+                            _buildClendarPicker();
+                          },
+                          style: ElevatedButton.styleFrom(
+                              backgroundColor: AppColors.transparent,
+                              shape: const CircleBorder(),
+                              padding: EdgeInsets.all(AppSize.height8)),
+                          child: Icon(Icons.calendar_month_outlined,
+                              color: AppColors.appBarIConColor),
+                        ),
+                        PopupMenuButton(
+                          color: AppColors.navbarColor,
+                          itemBuilder: (context) {
+                            return _flagsmenuList;
+                          },
+                          icon: Icon(Icons.flag_sharp,
+                              color: AppColors.appBarIConColor),
+                        ),
+                        PopupMenuButton(
+                          color: AppColors.navbarColor,
+                          itemBuilder: (context) {
+                            return _groupMenuList;
+                          },
+                          icon: Icon(Icons.local_offer_outlined,
+                              color: AppColors.appBarIConColor),
+                        ),
+                      ],
+                    ),
+                    PrimaryButton(onPressed: () {}, title: AppStrings.save)
+                  ],
+                )
+              ],
             ),
           ),
         );
